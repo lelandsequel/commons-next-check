@@ -1,0 +1,83 @@
+{
+  "package": "0.2.2",
+  "cleanDependencyInstall": true,
+  "typescript": "5.9.3",
+  "nodeTypes": "20.19.0",
+  "lockfile": "package-lock.json",
+  "compiledFiles": 64,
+  "allBytesMatch": true,
+  "compilerRuntimes": [
+    "20.0.0",
+    "22.0.0",
+    "24.15.0",
+    "24.18.0",
+    "24.19.0"
+  ],
+  "steps": [
+    {
+      "command": [
+        "npm",
+        "ci",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--cache",
+        "/workspace/scratch/aa8575ccd883/npm-cache"
+      ],
+      "exitCode": 0,
+      "stdout": "\nadded 5 packages in 417ms\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+    },
+    {
+      "command": [
+        "/workspace/scratch/aa8575ccd883/qa-node-runtimes/node-v20.0.0-linux-x64/bin/node",
+        "scripts/build.mjs",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: all 64 compiled files match byte-for-byte.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/aa8575ccd883/qa-node-runtimes/node-v22.0.0-linux-x64/bin/node",
+        "scripts/build.mjs",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: all 64 compiled files match byte-for-byte.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/aa8575ccd883/qa-node-runtimes/node-v24.15.0-linux-x64/bin/node",
+        "scripts/build.mjs",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: all 64 compiled files match byte-for-byte.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/aa8575ccd883/qa-node-runtimes/node-v24.18.0-linux-x64/bin/node",
+        "scripts/build.mjs",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: all 64 compiled files match byte-for-byte.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "scripts/build.mjs",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: all 64 compiled files match byte-for-byte.\n",
+      "stderr": ""
+    }
+  ]
+}

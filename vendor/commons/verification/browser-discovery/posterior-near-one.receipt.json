@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "kind": "discovery",
+  "input": {
+    "actions": [
+      {
+        "id": "investigate",
+        "losses": {
+          "negative": 1,
+          "positive": 1
+        }
+      },
+      {
+        "id": "accept-positive",
+        "losses": {
+          "negative": 20,
+          "positive": 0
+        }
+      },
+      {
+        "id": "accept-negative",
+        "losses": {
+          "negative": 0,
+          "positive": 20
+        }
+      }
+    ],
+    "adequacy": {
+      "alpha": 0.05,
+      "epochId": "sensor-monitor-v1"
+    },
+    "definition": {
+      "budget": 6,
+      "experiments": [
+        {
+          "cost": 1,
+          "id": "probe",
+          "likelihoods": {
+            "negative": {
+              "0": 0.8,
+              "1": 0.2
+            },
+            "positive": {
+              "0": 0.2,
+              "1": 0.8
+            }
+          },
+          "outcomes": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "cost": 0.5,
+          "id": "weak-probe",
+          "likelihoods": {
+            "negative": {
+              "0": 0.6,
+              "1": 0.4
+            },
+            "positive": {
+              "0": 0.4,
+              "1": 0.6
+            }
+          },
+          "outcomes": [
+            "1",
+            "0"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "positive",
+          "prior": 0.99999999998
+        },
+        {
+          "id": "negative",
+          "prior": 2e-11
+        }
+      ],
+      "modelId": "sensor-direction-v1",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment"
+    },
+    "kind": "discovery",
+    "observations": []
+  },
+  "result": {
+    "snapshot": {
+      "schemaVersion": 2,
+      "runtime": {
+        "implementation": "@cosmic/commons-discovery/0.2.1",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "numericalModel": "binary64-native-math"
+      },
+      "chainAnchorHash": "44a3fecf37b5c599ca269f01d307456ecf96432360d5313855bee39d5f6f7750",
+      "modelId": "sensor-direction-v1",
+      "definitionHash": "75bd80abb591f3079552df8f075aa8780662d86487065a85f0d04996478918b4",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment",
+      "probabilitySemantics": "posterior-within-declared-candidate-family",
+      "posterior": {
+        "positive": 0.99999999998,
+        "negative": 2.000000000000004e-11
+      },
+      "entropyNats": 5.127057785020996e-10,
+      "spent": 0,
+      "remainingBudget": 6,
+      "modelMismatch": false,
+      "receipts": []
+    },
+    "recommendation": {
+      "status": "experiment",
+      "experimentId": "probe",
+      "cost": 1,
+      "expectedInformationGainNats": 1.6635487923617735e-11,
+      "informationGainPerCost": 1.6635487923617735e-11,
+      "predictiveOutcomes": {
+        "0": 0.20000000001200002,
+        "1": 0.7999999999880001
+      }
+    },
+    "adequacy": {
+      "schemaVersion": 2,
+      "runtime": {
+        "implementation": "@cosmic/commons-adequacy/0.2.2",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "numericalModel": "binary64-native-math"
+      },
+      "definitionHash": "75bd80abb591f3079552df8f075aa8780662d86487065a85f0d04996478918b4",
+      "optionsHash": "c6c0d4656bcc5759adbd4440fc9af1d92c00993a23d5d97c24afa366aa8ba66f",
+      "alpha": 0.05,
+      "epochId": "sensor-monitor-v1",
+      "supportPolicy": "strictly-positive-declared-prior-frozen-at-construction-v1",
+      "nullHypothesisIds": [
+        "positive",
+        "negative"
+      ],
+      "excludedZeroPriorHypothesisIds": [],
+      "normalizationPolicy": "normalize-row-preserve-smaller-tail-binary64-v1",
+      "effectiveLawHash": "c447a300b06b67d57ba06ba23755d454e21c49adb364d88533afd10a4478faf2",
+      "chainAnchorHash": "3917efd71f1eb15b7ee09b549da7ff960ed6b51c1fda9f2c70cf188095fcd193",
+      "status": "NOT_REJECTED",
+      "logEValue": 0,
+      "eValueState": "finite",
+      "maxLogEValue": 0,
+      "firstCrossingSequence": null,
+      "nullLogLikelihoods": {
+        "positive": 0,
+        "negative": 0
+      },
+      "impossibleHypothesisIds": [],
+      "alternativeLogLikelihood": 0,
+      "modelId": "sensor-direction-v1",
+      "nullSemantics": "frozen-positive-prior-conditional-bernoulli-laws",
+      "notRejectedSemantics": "insufficient-evidence-against-declared-laws-not-approval",
+      "budgetSemantics": "external-discovery-session-only",
+      "alternative": "per-experiment-beta-half-prequential",
+      "observationCount": 0,
+      "effectiveNullLaws": {
+        "probe": {
+          "positive": {
+            "tailOutcome": "0",
+            "tailProbability": 0.2,
+            "complementOutcome": "1"
+          },
+          "negative": {
+            "tailOutcome": "1",
+            "tailProbability": 0.2,
+            "complementOutcome": "0"
+          }
+        },
+        "weak-probe": {
+          "positive": {
+            "tailOutcome": "0",
+            "tailProbability": 0.4,
+            "complementOutcome": "1"
+          },
+          "negative": {
+            "tailOutcome": "1",
+            "tailProbability": 0.4,
+            "complementOutcome": "0"
+          }
+        }
+      },
+      "counts": {
+        "probe": {
+          "0": 0,
+          "1": 0
+        },
+        "weak-probe": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "pending": null,
+      "receipts": []
+    },
+    "decisionStatus": "AVAILABLE",
+    "action": {
+      "actionId": "accept-positive",
+      "expectedLoss": 4.000000000000008e-10,
+      "alternatives": [
+        {
+          "actionId": "accept-positive",
+          "expectedLoss": 4.000000000000008e-10
+        },
+        {
+          "actionId": "investigate",
+          "expectedLoss": 1
+        },
+        {
+          "actionId": "accept-negative",
+          "expectedLoss": 19.9999999996
+        }
+      ]
+    },
+    "assumptions": [
+      "Probabilities are conditional on the declared finite candidate family.",
+      "Observations are conditionally independent given the hypothesis and experiment.",
+      "NOT_REJECTED means insufficient evidence against the declared family, not approval.",
+      "An absent or unsupported adequacy assessment defers integrated action suggestions.",
+      "Experiment selection is greedy expected information per cost, not global optimality."
+    ]
+  },
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+  },
+  "digest": "b5f94a3360e0827f6b97e5ac0d9892fd09c3b258446a2cdd3fa25df247cc4eee"
+}

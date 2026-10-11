@@ -1,0 +1,97 @@
+<!doctype html>
+<!--
+Copyright 2026 Leland Jourdan II / C&L Strategy
+SPDX-License-Identifier: Apache-2.0
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A local workbench for deterministic reasoning, explicit decisions, and independently verifiable receipts.">
+  <title>COSMIC Commons · Reason. Decide. Replay.</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to workbench</a>
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="COSMIC Commons home">
+      <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M17 2 30 9.5v15L17 32 4 24.5v-15L17 2Z" stroke="currentColor" stroke-width="1.5"/><path d="m4 9.5 13 7.5m0 0 13-7.5M17 17v15" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="17" r="4" fill="currentColor"/></svg>
+      <span>COSMIC <strong>COMMONS</strong></span>
+    </a>
+    <div class="header-right"><span class="edition">DEVELOPER WORKBENCH</span><span class="connection" id="connection"><span class="status-dot"></span><span id="connection-label">Connecting</span></span></div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">EXPLICIT INPUTS. INSPECTABLE ANSWERS.</p><h1 id="page-title">Reason. Decide. <em>Replay.</em></h1><p class="intro-copy">Turn declared evidence and assumptions into results you can inspect, export, and reproduce.</p></div>
+      <div class="intro-note"><span class="note-symbol" aria-hidden="true">↳</span><p>Runs on your machine.<br><strong>Your inputs stay in this local service.</strong></p></div>
+    </section>
+
+    <div class="workspace-nav" aria-label="Workbench modes">
+      <div class="mode-tabs" role="tablist" aria-label="Workbench mode">
+        <button id="run-tab" class="mode-tab active" role="tab" aria-selected="true" aria-controls="run-panel" data-mode="run">Build a result <span>01</span></button>
+        <button id="verify-tab" class="mode-tab" role="tab" aria-selected="false" aria-controls="verify-panel" tabindex="-1" data-mode="verify">Verify a receipt <span>02</span></button>
+      </div>
+      <span class="nav-note">Evidence in. Receipt out.</span>
+    </div>
+
+    <section id="workspace" aria-label="COSMIC workbench">
+      <div id="run-panel" role="tabpanel" aria-labelledby="run-tab">
+        <div class="example-heading"><h2>Start with a question</h2><span>Use an example, then make it yours.</span></div>
+        <div class="examples" id="examples" aria-label="Example inputs"><p class="loading-message">Loading examples from the local service…</p></div>
+        <p class="error-banner" id="examples-error" role="alert" hidden></p>
+        <div class="work-grid">
+          <section class="panel input-panel" aria-labelledby="input-heading">
+            <div class="panel-heading"><div><p class="section-index">01 / DECLARE</p><h2 id="input-heading">Your input</h2></div><button class="text-button" id="format-button" type="button">Format JSON</button></div>
+            <div class="editor-toolbar"><span class="file-name" id="input-filename">input.json</span><span class="syntax-label">JSON</span></div>
+            <label class="sr-only" for="input-editor">Input JSON</label><textarea id="input-editor" class="json-editor" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="Choose an example or paste a supported input here."></textarea>
+            <div class="editor-footer"><span id="editor-meta">0 lines</span><span class="shortcut">⌘ / Ctrl + Enter to run</span></div>
+            <div class="run-controls"><p id="input-help">Every assumption is part of the input.</p><button class="primary-button" id="run-button" type="button"><span id="run-button-label">Run reasoning</span><span aria-hidden="true">↗</span></button></div>
+            <p class="error-banner inset-error" id="run-error" role="alert" hidden></p>
+          </section>
+
+          <section class="panel result-panel" aria-labelledby="result-heading" aria-live="polite" aria-busy="false" id="result-panel">
+            <div class="panel-heading"><div><p class="section-index">02 / INSPECT</p><h2 id="result-heading">The result</h2></div><span class="pill" id="result-kind">NOT RUN</span></div>
+            <div class="empty-state" id="empty-result"><div class="empty-icon" aria-hidden="true"><svg viewBox="0 0 56 56" fill="none"><path d="M16 7h18l8 8v34H16V7Z" stroke="currentColor" stroke-width="1.5"/><path d="M34 7v9h8M23 26h12M23 32h12M23 38h7" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="13" r="6" fill="var(--surface)" stroke="currentColor" stroke-width="1.5"/></svg></div><h3>Answers come with a paper trail.</h3><p>Choose an example and run it. Your result, declared assumptions, and replayable receipt will appear here.</p><span class="empty-caption">No computation has run yet.</span></div>
+            <div id="result-content" class="result-content" hidden>
+              <div id="decision-notice" class="decision-notice" role="status" hidden></div>
+              <div class="summary-cards" id="summary-cards"></div>
+              <div id="result-explanation" class="result-explanation"></div>
+              <div id="result-details"></div>
+              <div class="receipt-strip"><div><span class="receipt-label">RECEIPT DIGEST · SHA-256</span><code id="receipt-digest"></code></div><button class="icon-button" id="copy-digest" aria-label="Copy receipt digest" title="Copy digest" type="button">Copy</button></div>
+              <div class="receipt-actions"><button class="secondary-button" id="download-receipt" type="button">Download receipt <span aria-hidden="true">↓</span></button><button class="text-button" id="verify-current" type="button">Verify this result <span aria-hidden="true">→</span></button></div>
+              <details class="json-details"><summary>Inspect full result</summary><pre id="result-json" tabindex="0"></pre></details>
+              <details class="json-details"><summary>Inspect complete receipt</summary><pre id="receipt-json" tabindex="0"></pre></details>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id="verify-panel" role="tabpanel" aria-labelledby="verify-tab" hidden>
+        <div class="verify-intro"><h2>Give a receipt a second look.</h2><p>Check its digest and replay the computation. Add a digest from a trusted source to check its external anchor, too.</p></div>
+        <div class="work-grid verify-grid">
+          <section class="panel" aria-labelledby="receipt-input-heading">
+            <div class="panel-heading"><div><p class="section-index">01 / IMPORT</p><h2 id="receipt-input-heading">Your receipt</h2></div><button class="text-button" id="load-current" type="button" disabled>Use last result</button></div>
+            <div class="import-zone" id="import-zone"><span class="import-icon" aria-hidden="true">↥</span><div><strong>Drop a receipt here</strong><p>or choose a JSON file from your machine</p></div><label class="secondary-button file-button" for="receipt-file">Choose file<input type="file" id="receipt-file" accept=".json,application/json"></label></div>
+            <div class="editor-toolbar"><label class="file-name" for="receipt-editor" id="receipt-filename">Or paste receipt JSON</label><span class="syntax-label">JSON</span></div>
+            <textarea id="receipt-editor" class="json-editor receipt-editor" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="Paste the complete receipt, including its digest."></textarea>
+            <div class="anchor-field"><label for="trusted-digest">Trusted digest <span>optional</span></label><input id="trusted-digest" type="text" spellcheck="false" autocomplete="off" placeholder="64-character SHA-256 from a trusted source" maxlength="64"><p>A receipt's own digest is not an independent trust anchor.</p></div>
+            <div class="run-controls"><p id="import-status">Ready when you are.</p><button class="primary-button" id="verify-button" type="button"><span id="verify-button-label">Verify & replay</span><span aria-hidden="true">↗</span></button></div>
+            <p class="error-banner inset-error" id="verify-error" role="alert" hidden></p>
+          </section>
+
+          <section class="panel verification-panel" aria-labelledby="verification-heading" id="verification-panel" aria-live="polite" aria-busy="false">
+            <div class="panel-heading"><div><p class="section-index">02 / CHECK</p><h2 id="verification-heading">Verification</h2></div><span class="pill" id="verification-status">NOT VERIFIED</span></div>
+            <div class="empty-state verification-empty" id="empty-verification"><div class="empty-icon" aria-hidden="true"><svg viewBox="0 0 56 56" fill="none"><path d="m28 6 17 7v14c0 11-10 19-17 23-7-4-17-12-17-23V13l17-7Z" stroke="currentColor" stroke-width="1.5"/><path d="m21 28 5 5 10-11" stroke="currentColor" stroke-width="1.5"/></svg></div><h3>Trust is a check you can run.</h3><p>Import a receipt to inspect its integrity, replay status, and trusted digest match.</p></div>
+            <div id="verification-content" class="verification-content" hidden><div id="verification-checks" class="verification-checks"></div><p id="verification-reason" class="verification-reason"></p><div class="verification-note"><strong>What this proves</strong><p>Successful replay reproduces the recorded computation. It does not establish that the supplied evidence or model is true.</p></div><details class="json-details"><summary>Inspect verification response</summary><pre id="verification-json" tabindex="0"></pre></details></div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <footer><span>COSMIC COMMONS</span><p>Reproducible computation. Explicit uncertainty. Inspectable decisions.</p><a href="#page-title">Back to top ↑</a></footer>
+  </main>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

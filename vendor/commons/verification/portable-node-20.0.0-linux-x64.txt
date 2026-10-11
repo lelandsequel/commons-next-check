@@ -1,0 +1,542 @@
+Node 20.0.0 / linux-x64
+Clean package copy; node_modules absent.
+TAP version 13
+# Subtest: canonical hashes ignore object key insertion order and preserve array order
+ok 1 - canonical hashes ignore object key insertion order and preserve array order
+  ---
+  duration_ms: 1.556988
+  ...
+# Subtest: strict canonicalizer rejects lossy, executable or non-JSON inputs
+ok 2 - strict canonicalizer rejects lossy, executable or non-JSON inputs
+  ---
+  duration_ms: 0.42488
+  ...
+# Subtest: calendar validation is explicit and rejects invalid UTC dates
+ok 3 - calendar validation is explicit and rejects invalid UTC dates
+  ---
+  duration_ms: 0.511201
+  ...
+# Subtest: source digest verification checks the supplied content bytes through canonical JSON
+ok 4 - source digest verification checks the supplied content bytes through canonical JSON
+  ---
+  duration_ms: 1.316305
+  ...
+# Subtest: reference-only provenance is reported honestly without claiming content verification
+ok 5 - reference-only provenance is reported honestly without claiming content verification
+  ---
+  duration_ms: 0.233472
+  ...
+# Subtest: duplicate references, absent dependencies and cycles have different failure codes
+ok 6 - duplicate references, absent dependencies and cycles have different failure codes
+  ---
+  duration_ms: 0.724963
+  ...
+# Subtest: availability propagates through lineage and expires exactly at the declared boundary
+ok 7 - availability propagates through lineage and expires exactly at the declared boundary
+  ---
+  duration_ms: 0.469879
+  ...
+# Subtest: conflicting live claim records are distinct from malformed duplicate IDs
+ok 8 - conflicting live claim records are distinct from malformed duplicate IDs
+  ---
+  duration_ms: 1.019398
+  ...
+# Subtest: future records and dangling sources cannot become available facts
+ok 9 - future records and dangling sources cannot become available facts
+  ---
+  duration_ms: 0.247794
+  ...
+# Subtest: dense cycles produce one component diagnostic and bounded per-edge reasons
+ok 10 - dense cycles produce one component diagnostic and bounded per-edge reasons
+  ---
+  duration_ms: 23.777647
+  ...
+# Subtest: graph limits refuse before building graph diagnostics, including missing edges
+ok 11 - graph limits refuse before building graph diagnostics, including missing edges
+  ---
+  duration_ms: 18.833671
+  ...
+# Subtest: a thousand-fact reverse-ordered chain propagates the strongest unavailable status
+ok 12 - a thousand-fact reverse-ordered chain propagates the strongest unavailable status
+  ---
+  duration_ms: 7.216893
+  ...
+# Subtest: cycle components exclude downstream facts, which become invalid through lineage
+ok 13 - cycle components exclude downstream facts, which become invalid through lineage
+  ---
+  duration_ms: 0.297769
+  ...
+# Subtest: bounded graph traversal agrees with an independent reachability oracle
+ok 14 - bounded graph traversal agrees with an independent reachability oracle
+  ---
+  duration_ms: 15.551512
+  ...
+# Subtest: claim conflicts use individual availability before dependency propagation
+ok 15 - claim conflicts use individual availability before dependency propagation
+  ---
+  duration_ms: 0.302326
+  ...
+# Subtest: B1: a zero-prior decoy cannot keep an inadequate active family AVAILABLE
+ok 2 - B1: a zero-prior decoy cannot keep an inadequate active family AVAILABLE
+  ---
+  duration_ms: 13.092839
+  ...
+# Subtest: adding excluded laws leaves the adequacy statistics unchanged and records their exclusion
+ok 3 - adding excluded laws leaves the adequacy statistics unchanged and records their exclusion
+  ---
+  duration_ms: 4.340386
+  ...
+# Subtest: all strictly positive prior laws remain admitted, independent of prior magnitude
+ok 4 - all strictly positive prior laws remain admitted, independent of prior magnitude
+  ---
+  duration_ms: 2.759672
+  ...
+# Subtest: zero support is determined by the active family even when an excluded law predicts the outcome
+ok 5 - zero support is determined by the active family even when an excluded law predicts the outcome
+  ---
+  duration_ms: 5.485101
+  ...
+# Subtest: the admitted support is fixed before outcomes and cannot change through caller mutation
+ok 6 - the admitted support is fixed before outcomes and cannot change through caller mutation
+  ---
+  duration_ms: 0.985957
+  ...
+# Subtest: v2 adequacy replay binds the support contract and refuses v1 receipts
+ok 7 - v2 adequacy replay binds the support contract and refuses v1 receipts
+  ---
+  duration_ms: 4.157219
+  ...
+# Subtest: Original regression B1 fixtures both DEFER and suppress actions
+ok 3 - Original regression B1 fixtures both DEFER and suppress actions
+  ---
+  duration_ms: 49.758075
+  ...
+# Subtest: omitted adequacy is explicitly NOT_EVALUATED and cannot suggest an integrated action
+ok 4 - omitted adequacy is explicitly NOT_EVALUATED and cannot suggest an integrated action
+  ---
+  duration_ms: 4.205813
+  ...
+# Subtest: a valid three-outcome discovery is UNSUPPORTED for adequacy, while retaining its conditional posterior
+ok 5 - a valid three-outcome discovery is UNSUPPORTED for adequacy, while retaining its conditional posterior
+  ---
+  duration_ms: 3.888353
+  ...
+# Subtest: a supported nonrejected monitor retains model-conditional action suggestions
+ok 6 - a supported nonrejected monitor retains model-conditional action suggestions
+  ---
+  duration_ms: 4.633838
+  ...
+# Subtest: receipt budget refuses oversize observation chains before inference and scales with family size
+ok 7 - receipt budget refuses oversize observation chains before inference and scales with family size
+  ---
+  duration_ms: 26.622346
+  ...
+# Subtest: largest admitted chains fit canonical receipt limits with and without adequacy
+ok 8 - largest admitted chains fit canonical receipt limits with and without adequacy
+  ---
+  duration_ms: 271.259851
+  ...
+# Subtest: long identifier amplification is refused before inference in integrated and low-level APIs
+ok 9 - long identifier amplification is refused before inference in integrated and low-level APIs
+  ---
+  duration_ms: 1.490237
+  ...
+# Subtest: byte preflight accounts for escaped and multibyte identifiers in repeated receipt fields
+ok 10 - byte preflight accounts for escaped and multibyte identifiers in repeated receipt fields
+  ---
+  duration_ms: 55.96161
+  ...
+# Subtest: Bayes matches hand-derived odds and expected-loss decisions
+ok 4 - Bayes matches hand-derived odds and expected-loss decisions
+  ---
+  duration_ms: 3.526978
+  ...
+# Subtest: perfect test yields log(2) nats; tie-break is stable lexical ID
+ok 5 - perfect test yields log(2) nats; tie-break is stable lexical ID
+  ---
+  duration_ms: 0.514606
+  ...
+# Subtest: decimal budgets permit exactly three 0.1-cost observations
+ok 6 - decimal budgets permit exactly three 0.1-cost observations
+  ---
+  duration_ms: 0.785705
+  ...
+# Subtest: input and receipt mutations cannot change an active session; duplicate evidence is rejected
+ok 7 - input and receipt mutations cannot change an active session; duplicate evidence is rejected
+  ---
+  duration_ms: 0.465432
+  ...
+# Subtest: zero support halts action recommendation and preserves explicit mismatch
+ok 8 - zero support halts action recommendation and preserves explicit mismatch
+  ---
+  duration_ms: 0.771023
+  ...
+# Subtest: exact replay rejects tampering even when the attacker recomputes a hash
+ok 9 - exact replay rejects tampering even when the attacker recomputes a hash
+  ---
+  duration_ms: 0.917734
+  ...
+# Subtest: runtime mismatch is refused while numerical comparison disclaims exact verification
+ok 10 - runtime mismatch is refused while numerical comparison disclaims exact verification
+  ---
+  duration_ms: 1.567694
+  ...
+# Subtest: finite JSON hashing is stable and refuses sparse/nonfinite values
+ok 11 - finite JSON hashing is stable and refuses sparse/nonfinite values
+  ---
+  duration_ms: 0.263157
+  ...
+# Subtest: adequacy e-value matches a closed-form prequential Bernoulli calculation
+ok 12 - adequacy e-value matches a closed-form prequential Bernoulli calculation
+  ---
+  duration_ms: 13.26329
+  ...
+# Subtest: adequacy preparation commits predictions before the outcome and rejects forged tokens
+ok 13 - adequacy preparation commits predictions before the outcome and rejects forged tokens
+  ---
+  duration_ms: 0.943443
+  ...
+# Subtest: format endpoint refuses ambiguous keys and numbers before changing editable input
+ok 5 - format endpoint refuses ambiguous keys and numbers before changing editable input
+  ---
+  duration_ms: 68.898572
+  ...
+# Subtest: early receipt refusal cannot label a supplied anchor as absent or matched
+ok 6 - early receipt refusal cannot label a supplied anchor as absent or matched
+  ---
+  duration_ms: 12.462763
+  ...
+# Subtest: receipt verification refuses changed runtime or source artifact even with recomputed digest
+ok 6 - receipt verification refuses changed runtime or source artifact even with recomputed digest
+  ---
+  duration_ms: 34.622319
+  ...
+# Subtest: a freshly recomputed digest does not hide a false result
+ok 7 - a freshly recomputed digest does not hide a false result
+  ---
+  duration_ms: 8.833841
+  ...
+# Subtest: self-consistent replacement passes unanchored replay but fails the original external digest
+ok 8 - self-consistent replacement passes unanchored replay but fails the original external digest
+  ---
+  duration_ms: 17.332267
+  ...
+# Subtest: wrong top-level kind, unknown fields and malformed digest are refused
+ok 9 - wrong top-level kind, unknown fields and malformed digest are refused
+  ---
+  duration_ms: 16.195232
+  ...
+# Subtest: certain posterior and exact-zero likelihoods remain serializable and replayable
+ok 10 - certain posterior and exact-zero likelihoods remain serializable and replayable
+  ---
+  duration_ms: 13.086854
+  ...
+# Subtest: rejected model family cannot yield an expected-loss action
+ok 11 - rejected model family cannot yield an expected-loss action
+  ---
+  duration_ms: 5.19225
+  ...
+# Subtest: HTTP boundary rejects foreign origin/host, malformed JSON and executable input
+ok 12 - HTTP boundary rejects foreign origin/host, malformed JSON and executable input
+  ---
+  duration_ms: 64.273201
+  ...
+# Subtest: CLI returns nonzero for missing input, unsupported command and invalid options
+ok 13 - CLI returns nonzero for missing input, unsupported command and invalid options
+  ---
+  duration_ms: 194.736704
+  ...
+# Subtest: complete examples yield hand-calculated outputs
+ok 7 - complete examples yield hand-calculated outputs
+  ---
+  duration_ms: 54.421896
+  ...
+# Subtest: every example roundtrips through exact replay with separate anchor status
+ok 8 - every example roundtrips through exact replay with separate anchor status
+  ---
+  duration_ms: 227.477326
+  ...
+# Subtest: forged policy approval fails replay even after a new digest is computed
+ok 9 - forged policy approval fails replay even after a new digest is computed
+  ---
+  duration_ms: 13.49851
+  ...
+# Subtest: a retained envelope digest cannot anchor a changed payload
+ok 10 - a retained envelope digest cannot anchor a changed payload
+  ---
+  duration_ms: 5.435657
+  ...
+# Subtest: runtime changes refuse exact replay instead of falling back to tolerance
+ok 11 - runtime changes refuse exact replay instead of falling back to tolerance
+  ---
+  duration_ms: 9.978027
+  ...
+# Subtest: rejected model families suppress expected-loss action suggestions
+ok 12 - rejected model families suppress expected-loss action suggestions
+  ---
+  duration_ms: 12.387059
+  ...
+# Subtest: policy expiry is evaluated against explicit input time
+ok 13 - policy expiry is evaluated against explicit input time
+  ---
+  duration_ms: 7.302622
+  ...
+# Subtest: CLI writes and verifies a portable receipt file and uses error exit codes
+ok 14 - CLI writes and verifies a portable receipt file and uses error exit codes
+  ---
+  duration_ms: 345.045444
+  ...
+# Subtest: local API runs examples, rejects malformed input and cross-origin requests
+ok 15 - local API runs examples, rejects malformed input and cross-origin requests
+  ---
+  duration_ms: 68.910714
+  ...
+# Subtest: strict JSON retains ordinary decimals, safe boundaries and exactly equivalent spellings
+ok 8 - strict JSON retains ordinary decimals, safe boundaries and exactly equivalent spellings
+  ---
+  duration_ms: 2.203613
+  ...
+# Subtest: strict JSON refuses exactly round-tripping integers outside the safe range at every depth
+ok 9 - strict JSON refuses exactly round-tripping integers outside the safe range at every depth
+  ---
+  duration_ms: 0.894108
+  ...
+# Subtest: strict JSON refuses decimal collapse, underflow, overflow and negative zero at every depth
+ok 10 - strict JSON refuses decimal collapse, underflow, overflow and negative zero at every depth
+  ---
+  duration_ms: 0.284148
+  ...
+# Subtest: numeric validation handles long bounded tokens without expanding huge exponents
+ok 11 - numeric validation handles long bounded tokens without expanding huge exponents
+  ---
+  duration_ms: 12.787123
+  ...
+# Subtest: reconstructed B6 false ALLOW cases are refused before policy evaluation
+ok 12 - reconstructed B6 false ALLOW cases are refused before policy evaluation
+  ---
+  duration_ms: 3.990227
+  ...
+# Subtest: Original regression B6 files retain their exact bytes and refuse before policy evaluation
+ok 13 - Original regression B6 files retain their exact bytes and refuse before policy evaluation
+  ---
+  duration_ms: 1.308253
+  ...
+# Subtest: object and generated receipt boundaries refuse unsafe integers consistently
+ok 14 - object and generated receipt boundaries refuse unsafe integers consistently
+  ---
+  duration_ms: 18.133625
+  ...
+# Subtest: SDK receipt text APIs refuse unsafe integers before replay or integrity checks
+ok 15 - SDK receipt text APIs refuse unsafe integers before replay or integrity checks
+  ---
+  duration_ms: 6.045196
+  ...
+# Subtest: receipt text refuses a decimal substitution even when materialized replay and trusted digest match
+ok 16 - receipt text refuses a decimal substitution even when materialized replay and trusted digest match
+  ---
+  duration_ms: 22.267829
+  ...
+# Subtest: CLI rejects numeric collapse in raw run inputs and anchored receipts
+ok 17 - CLI rejects numeric collapse in raw run inputs and anchored receipts
+  ---
+  duration_ms: 148.671731
+  ...
+# Subtest: CLI refuses Original regression B6 inputs and exactly represented unsafe integers
+ok 18 - CLI refuses Original regression B6 inputs and exactly represented unsafe integers
+  ---
+  duration_ms: 291.92841
+  ...
+# Subtest: HTTP rejects numeric collapse in raw run inputs and both receipt envelope forms
+ok 19 - HTTP rejects numeric collapse in raw run inputs and both receipt envelope forms
+  ---
+  duration_ms: 85.944671
+  ...
+# Subtest: known pass, known fail, absent evidence and malformed rule produce four distinct outcomes
+ok 9 - known pass, known fail, absent evidence and malformed rule produce four distinct outcomes
+  ---
+  duration_ms: 3.711197
+  ...
+# Subtest: numeric comparison never coerces a string into a number
+ok 10 - numeric comparison never coerces a string into a number
+  ---
+  duration_ms: 0.22571
+  ...
+# Subtest: missing exists is unknown while a recorded null value exists
+ok 11 - missing exists is unknown while a recorded null value exists
+  ---
+  duration_ms: 0.341244
+  ...
+# Subtest: all-requirement evaluation records every rule and makes a known failure decisive
+ok 12 - all-requirement evaluation records every rule and makes a known failure decisive
+  ---
+  duration_ms: 0.867858
+  ...
+# Subtest: equality handles structured JSON and membership remains type-sensitive
+ok 13 - equality handles structured JSON and membership remains type-sensitive
+  ---
+  duration_ms: 0.496508
+  ...
+# Subtest: fact IDs are exact map keys with no property traversal
+ok 14 - fact IDs are exact map keys with no property traversal
+  ---
+  duration_ms: 1.058586
+  ...
+# Subtest: expired or conflicted required facts defer and cycles error
+ok 15 - expired or conflicted required facts defer and cycles error
+  ---
+  duration_ms: 0.772795
+  ...
+# Subtest: vacuous allow and unknown schema fields are rejected
+ok 16 - vacuous allow and unknown schema fields are rejected
+  ---
+  duration_ms: 0.163987
+  ...
+# Subtest: interval sensitivity respects open and closed thresholds without inventing confidence
+ok 17 - interval sensitivity respects open and closed thresholds without inventing confidence
+  ---
+  duration_ms: 0.319742
+  ...
+# Subtest: public ESM package exports execute as JavaScript and carry declared types
+ok 10 - public ESM package exports execute as JavaScript and carry declared types
+  ---
+  duration_ms: 82.275769
+  ...
+# Subtest: doctor distinguishes the execution target from recorded replay requirements
+ok 11 - doctor distinguishes the execution target from recorded replay requirements
+  ---
+  duration_ms: 93.133888
+  ...
+# Subtest: canonical byte accounting matches UTF-8, escaped strings, keys, and container punctuation
+ok 11 - canonical byte accounting matches UTF-8, escaped strings, keys, and container punctuation
+  ---
+  duration_ms: 34.650762
+  ...
+# Subtest: repeated large values stop serialization at the byte budget before traversing later members
+ok 12 - repeated large values stop serialization at the byte budget before traversing later members
+  ---
+  duration_ms: 4.946058
+  ...
+# Subtest: a small request cannot emit a huge receipt by echoing one fact through many policy rules
+ok 13 - a small request cannot emit a huge receipt by echoing one fact through many policy rules
+  ---
+  duration_ms: 51.010011
+  ...
+# Subtest: formatting overhead is included in the standard receipt export limit
+ok 14 - formatting overhead is included in the standard receipt export limit
+  ---
+  duration_ms: 10.359923
+  ...
+# Subtest: receipt bytes repeat, and creation snapshots mutable caller inputs
+ok 12 - receipt bytes repeat, and creation snapshots mutable caller inputs
+  ---
+  duration_ms: 3.980422
+  ...
+# Subtest: verification recomputes a report and labels absent external anchor
+ok 13 - verification recomputes a report and labels absent external anchor
+  ---
+  duration_ms: 1.602977
+  ...
+# Subtest: byte tampering fails integrity and recomputed dishonest reports fail replay
+ok 14 - byte tampering fails integrity and recomputed dishonest reports fail replay
+  ---
+  duration_ms: 2.353518
+  ...
+# Subtest: rewriting input and output together requires a trusted anchor to detect substitution
+ok 15 - rewriting input and output together requires a trusted anchor to detect substitution
+  ---
+  duration_ms: 2.054047
+  ...
+# Subtest: environment and asOf are bound, with an additional expected environment constraint
+ok 16 - environment and asOf are bound, with an additional expected environment constraint
+  ---
+  duration_ms: 1.209995
+  ...
+# Subtest: unsupported caller-declared environments never count as exact policy replay
+ok 17 - unsupported caller-declared environments never count as exact policy replay
+  ---
+  duration_ms: 3.307107
+  ...
+# Subtest: early verification refusal reports integrity NOT_CHECKED and remembers supplied anchors
+ok 18 - early verification refusal reports integrity NOT_CHECKED and remembers supplied anchors
+  ---
+  duration_ms: 7.493049
+  ...
+# Subtest: CLI distinguishes malformed anchors from well-formed mismatches
+ok 19 - CLI distinguishes malformed anchors from well-formed mismatches
+  ---
+  duration_ms: 362.467806
+  ...
+# Subtest: CLI --out refuses existing paths before evaluation and never follows output symlinks
+ok 20 - CLI --out refuses existing paths before evaluation and never follows output symlinks
+  ---
+  duration_ms: 495.032259
+  ...
+# Subtest: malformed envelopes and digest syntax cannot pass
+ok 21 - malformed envelopes and digest syntax cannot pass
+  ---
+  duration_ms: 0.858455
+  ...
+# Subtest: Original regression clean Mac receipt retains valid integrity and anchor but refuses this implementation runtime
+ok 13 - Original regression clean Mac receipt retains valid integrity and anchor but refuses this implementation runtime
+  ---
+  duration_ms: 6.313931
+  ...
+# Subtest: Original regression duplicate verdicts refuse before integrity or runtime checks through SDK and CLI
+ok 14 - Original regression duplicate verdicts refuse before integrity or runtime checks through SDK and CLI
+  ---
+  duration_ms: 120.83503
+  ...
+# Subtest: Original regression duplicate receipts refuse on raw and envelope HTTP paths
+ok 15 - Original regression duplicate receipts refuse on raw and envelope HTTP paths
+  ---
+  duration_ms: 50.038976
+  ...
+# Subtest: strict JSON rejects duplicate decoded keys throughout nested objects and arrays
+ok 14 - strict JSON rejects duplicate decoded keys throughout nested objects and arrays
+  ---
+  duration_ms: 2.182912
+  ...
+# Subtest: strict JSON preserves native values, repeated keys in separate objects, and safe own __proto__
+ok 15 - strict JSON preserves native values, repeated keys in separate objects, and safe own __proto__
+  ---
+  duration_ms: 1.00121
+  ...
+# Subtest: strict JSON rejects malformed syntax, escapes, control characters, and trailing content
+ok 16 - strict JSON rejects malformed syntax, escapes, control characters, and trailing content
+  ---
+  duration_ms: 0.420384
+  ...
+# Subtest: strict JSON enforces UTF-8 byte and nested-container limits with controlled errors
+ok 17 - strict JSON enforces UTF-8 byte and nested-container limits with controlled errors
+  ---
+  duration_ms: 20.016584
+  ...
+# Subtest: run receipt text rejects a false first verdict even when parsed replay and external anchor match
+ok 18 - run receipt text rejects a false first verdict even when parsed replay and external anchor match
+  ---
+  duration_ms: 34.611176
+  ...
+# Subtest: policy receipt text rejects duplicate verdicts before canonicalization
+ok 19 - policy receipt text rejects duplicate verdicts before canonicalization
+  ---
+  duration_ms: 6.040298
+  ...
+# Subtest: CLI refuses raw duplicate keys while a valid receipt still passes anchored replay
+ok 20 - CLI refuses raw duplicate keys while a valid receipt still passes anchored replay
+  ---
+  duration_ms: 163.905498
+  ...
+# Subtest: HTTP refuses raw and legacy-envelope duplicates without losing uploaded text
+ok 21 - HTTP refuses raw and legacy-envelope duplicates without losing uploaded text
+  ---
+  duration_ms: 70.014649
+  ...
+1..106
+# tests 106
+# suites 0
+# pass 106
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5340.730413

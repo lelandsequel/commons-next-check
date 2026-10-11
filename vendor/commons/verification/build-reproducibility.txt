@@ -1,0 +1,19 @@
+COMMAND ["npm", "ci", "--offline", "--ignore-scripts", "--no-audit", "--no-fund", "--cache", "/workspace/scratch/aa8575ccd883/npm-cache"]
+
+added 5 packages in 417ms
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+COMMAND ["/workspace/scratch/aa8575ccd883/qa-node-runtimes/node-v20.0.0-linux-x64/bin/node", "scripts/build.mjs", "--check"]
+REPRODUCIBLE: all 64 compiled files match byte-for-byte.
+
+COMMAND ["/workspace/scratch/aa8575ccd883/qa-node-runtimes/node-v22.0.0-linux-x64/bin/node", "scripts/build.mjs", "--check"]
+REPRODUCIBLE: all 64 compiled files match byte-for-byte.
+
+COMMAND ["/workspace/scratch/aa8575ccd883/qa-node-runtimes/node-v24.15.0-linux-x64/bin/node", "scripts/build.mjs", "--check"]
+REPRODUCIBLE: all 64 compiled files match byte-for-byte.
+
+COMMAND ["/workspace/scratch/aa8575ccd883/qa-node-runtimes/node-v24.18.0-linux-x64/bin/node", "scripts/build.mjs", "--check"]
+REPRODUCIBLE: all 64 compiled files match byte-for-byte.
+
+COMMAND ["/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node", "scripts/build.mjs", "--check"]
+REPRODUCIBLE: all 64 compiled files match byte-for-byte.

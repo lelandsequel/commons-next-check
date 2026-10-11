@@ -1,0 +1,713 @@
+{
+  "schemaVersion": 1,
+  "builder": "esbuild/0.25.12",
+  "fix": "Explicit tsconfigRaw with empty compilerOptions prevents ambient TypeScript strict-mode metadata discovery during JavaScript-only bundling. Emitted ESM remains inherently strict.",
+  "priorFailure": "An otherwise identical rebuild intermittently added one redundant use strict directive to an ESM module initializer.",
+  "bundleSha256": "76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7",
+  "inputsSha256": "c9441c5db13aa5295f252753351770a66367d5344665d5eb243099c689a5c379",
+  "allBytesMatch": true,
+  "repeatedChecks": 100,
+  "checksPerRuntime": 20,
+  "steps": [
+    {
+      "run": 1,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 2,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 3,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 4,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 5,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 6,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 7,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 8,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 9,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 10,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 11,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 12,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 13,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 14,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 15,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 16,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 17,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 18,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 19,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 20,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 21,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 22,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 23,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 24,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 25,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 26,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 27,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 28,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 29,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 30,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 31,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 32,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 33,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 34,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 35,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 36,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 37,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 38,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 39,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 40,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 41,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 42,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 43,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 44,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 45,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 46,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 47,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 48,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 49,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 50,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 51,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 52,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 53,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 54,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 55,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 56,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 57,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 58,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 59,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 60,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 61,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 62,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 63,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 64,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 65,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 66,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 67,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 68,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 69,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 70,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 71,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 72,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 73,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 74,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 75,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 76,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 77,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 78,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 79,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 80,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 81,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 82,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 83,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 84,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 85,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 86,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 87,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 88,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 89,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 90,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 91,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 92,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 93,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 94,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 95,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 96,
+      "node": "20.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 97,
+      "node": "22.0.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 98,
+      "node": "24.15.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 99,
+      "node": "24.18.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    },
+    {
+      "run": 100,
+      "node": "24.19.0",
+      "command": "node scripts/build-bundle.mjs --check",
+      "exitCode": 0,
+      "stdout": "REPRODUCIBLE: cosmic-commons.mjs (434803 bytes, sha256 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7); 13 shared test files plus standalone deployment proofs."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+Visual review of isolated standalone browser screenshots
+
+Bundle SHA-256: 76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7
+Node: 24.19.0; platform: linux-x64; Chromium: 153.0.8010.0
+
+Reviewed discovery-deferred-desktop.png, discovery-deferred-mobile.png and
+duplicate-refused.png from this directory.
+
+The public chooser presents five examples. Both discovery views show the amber
+DEFER notice and no action recommendation before posterior diagnostics. The
+narrow-screen layout remains readable and has no horizontal overflow. The
+receipt view visibly refuses the duplicate upload, with neutral NOT_CHECKED
+integrity / NOT_RUN replay and the trusted-anchor mismatch explained.
+
+The seven automated UI cases passed. All five examples ran through the UI; a
+downloaded receipt uploaded unchanged and verified against its retained digest;
+a duplicate-key upload remained unchanged in transit and refused before hashing.
+There were no page errors, console errors or requests outside the loopback
+server. The isolated runtime directory contained only cosmic-commons.mjs both
+before and after the run. The server and temporary directory were cleaned up.

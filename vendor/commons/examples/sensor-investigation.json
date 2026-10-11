@@ -1,0 +1,16 @@
+{
+  "kind":"discovery",
+  "definition":{
+    "modelId":"sensor-direction-v1",
+    "observationAssumption":"conditionally-independent-given-hypothesis-and-experiment",
+    "budget":6,
+    "hypotheses":[{"id":"positive","prior":0.5},{"id":"negative","prior":0.5}],
+    "experiments":[
+      {"id":"probe","cost":1,"outcomes":["1","0"],"likelihoods":{"positive":{"1":0.8,"0":0.2},"negative":{"1":0.2,"0":0.8}}},
+      {"id":"weak-probe","cost":0.5,"outcomes":["1","0"],"likelihoods":{"positive":{"1":0.6,"0":0.4},"negative":{"1":0.4,"0":0.6}}}
+    ]
+  },
+  "observations":[{"id":"measurement-1","experimentId":"probe","outcome":"1"},{"id":"measurement-2","experimentId":"probe","outcome":"1"}],
+  "adequacy":{"alpha":0.05,"epochId":"sensor-monitor-v1"},
+  "actions":[{"id":"investigate","losses":{"positive":1,"negative":1}},{"id":"accept-positive","losses":{"positive":0,"negative":20}},{"id":"accept-negative","losses":{"positive":20,"negative":0}}]
+}

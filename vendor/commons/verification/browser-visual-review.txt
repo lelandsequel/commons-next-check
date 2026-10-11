@@ -1,0 +1,23 @@
+Visual review of browser screenshots
+
+Execution: shipped modular JavaScript
+Node: 24.19.0; platform: linux-x64; Chromium: 153.0.8010.0
+Source digest: aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b
+Executed-code digest: 1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397
+
+Reviewed:
+- browser-discovery/B2-rejected-family-desktop.png
+- browser-discovery/B2-rejected-family-mobile.png
+- browser-receipt/B5-duplicate-refusal.png
+
+Observations:
+- The example chooser shows 5 example cards.
+- The rejected-model result shows the amber DEFER notice before numeric details
+  and says no action recommendation. Desktop and narrow-screen layouts remain
+  readable; the narrow-screen view has no horizontal overflow.
+- The duplicate-key receipt displays CHECKS FAILED. Integrity and replay are
+  neutral NOT_CHECKED / NOT_RUN, with the duplicate-key reason visible.
+
+The automated discovery and receipt gates passed 24 cases with no page or
+console errors. This note describes inspection of the three screenshots above;
+the JSON results record the individual automated assertions.

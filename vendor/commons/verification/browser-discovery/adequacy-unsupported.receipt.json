@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "kind": "discovery",
+  "input": {
+    "actions": [
+      {
+        "id": "investigate",
+        "losses": {
+          "negative": 1,
+          "positive": 1
+        }
+      },
+      {
+        "id": "accept-positive",
+        "losses": {
+          "negative": 20,
+          "positive": 0
+        }
+      },
+      {
+        "id": "accept-negative",
+        "losses": {
+          "negative": 0,
+          "positive": 20
+        }
+      }
+    ],
+    "adequacy": {
+      "alpha": 0.05,
+      "epochId": "sensor-monitor-v1"
+    },
+    "definition": {
+      "budget": 6,
+      "experiments": [
+        {
+          "cost": 1,
+          "id": "ternary",
+          "likelihoods": {
+            "negative": {
+              "a": 0.3,
+              "b": 0.3,
+              "c": 0.4
+            },
+            "positive": {
+              "a": 0.3,
+              "b": 0.3,
+              "c": 0.4
+            }
+          },
+          "outcomes": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "positive",
+          "prior": 0.5
+        },
+        {
+          "id": "negative",
+          "prior": 0.5
+        }
+      ],
+      "modelId": "sensor-direction-v1",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment"
+    },
+    "kind": "discovery",
+    "observations": [
+      {
+        "experimentId": "ternary",
+        "id": "ternary-observation",
+        "outcome": "a"
+      }
+    ]
+  },
+  "result": {
+    "snapshot": {
+      "schemaVersion": 2,
+      "runtime": {
+        "implementation": "@cosmic/commons-discovery/0.2.1",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "numericalModel": "binary64-native-math"
+      },
+      "chainAnchorHash": "a89c7806fd8980eb39b5a5b46bcc5ab3f295999e4bf11488b6968f6d4d826f7a",
+      "modelId": "sensor-direction-v1",
+      "definitionHash": "d069ef95cd9b6f24fbadf3eb080ce97dd28d9b1a5f336347be6a8d2e1414b396",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment",
+      "probabilitySemantics": "posterior-within-declared-candidate-family",
+      "posterior": {
+        "positive": 0.5,
+        "negative": 0.5
+      },
+      "entropyNats": 0.6931471805599453,
+      "spent": 1,
+      "remainingBudget": 5,
+      "modelMismatch": false,
+      "receipts": [
+        {
+          "schemaVersion": 2,
+          "runtime": {
+            "implementation": "@cosmic/commons-discovery/0.2.1",
+            "node": "24.19.0",
+            "v8": "13.6.233.17-node.51",
+            "platform": "linux",
+            "architecture": "x64",
+            "endianness": "LE",
+            "numericalModel": "binary64-native-math"
+          },
+          "id": "ternary-observation",
+          "experimentId": "ternary",
+          "outcome": "a",
+          "sequence": 1,
+          "status": "updated",
+          "cost": 1,
+          "priorPredictiveProbability": 0.3,
+          "posterior": {
+            "positive": 0.5,
+            "negative": 0.5
+          },
+          "priorPredictiveLogProbability": -1.203972804325936,
+          "entropyNats": 0.6931471805599453,
+          "previousHash": "a89c7806fd8980eb39b5a5b46bcc5ab3f295999e4bf11488b6968f6d4d826f7a",
+          "hash": "1c3a72ac8a494202f257c471a6b519243d21b26419e89752791edcd39cff78ed"
+        }
+      ]
+    },
+    "recommendation": {
+      "status": "stop",
+      "reason": "adequacy-unsupported"
+    },
+    "adequacy": {
+      "status": "UNSUPPORTED",
+      "reason": "Adequacy requires exactly two outcome labels for every experiment.",
+      "unsupportedExperimentIds": [
+        "ternary"
+      ]
+    },
+    "decisionStatus": "DEFER",
+    "action": null,
+    "assumptions": [
+      "Probabilities are conditional on the declared finite candidate family.",
+      "Observations are conditionally independent given the hypothesis and experiment.",
+      "NOT_REJECTED means insufficient evidence against the declared family, not approval.",
+      "An absent or unsupported adequacy assessment defers integrated action suggestions.",
+      "Experiment selection is greedy expected information per cost, not global optimality."
+    ]
+  },
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+  },
+  "digest": "eaaeba6e84710f897f1dbcb122cd9d578e8b07b562c9f333f3faaa42ecc01805"
+}

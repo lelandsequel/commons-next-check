@@ -1,0 +1,9 @@
+COSMIC Commons
+Copyright 2026 Leland Jourdan II / C&L Strategy
+
+This distribution contains selected Commons source derived from the COSMIC
+Discovery snapshot and later Commons work. Source origins and modifications
+are recorded in provenance/RELEASE-SELECTION.json.
+
+Apache License, Version 2.0: see LICENSE. Third-party build dependencies
+retain their respective licenses; this notice does not override their terms.

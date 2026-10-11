@@ -1,0 +1,6 @@
+{
+  "kind":"policy",
+  "asOf":"2026-09-28T18:00:00.000Z",
+  "policy":{"id":"release-authorization","version":"1.0.0","rules":[{"id":"artifact-bound","factId":"artifact","op":"eq","value":"sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172"},{"id":"tests-pass","factId":"tests","op":"eq","value":true},{"id":"reviewed","factId":"review","op":"eq","value":"approved"},{"id":"no-critical-findings","factId":"critical","op":"lte","value":0}]},
+  "evidence":{"sources":[{"id":"build-record","content":{"artifact":"sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172","testsPassed":true,"criticalFindings":0}},{"id":"review-record","content":{"review":"approved","artifact":"sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172"}}],"facts":[{"id":"artifact","sourceId":"build-record","value":"sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172"},{"id":"tests","sourceId":"build-record","value":true,"dependsOn":["artifact"]},{"id":"review","sourceId":"review-record","value":"approved","dependsOn":["artifact"],"expiresAt":"2026-09-29T18:00:00.000Z"},{"id":"critical","sourceId":"build-record","value":0,"dependsOn":["artifact"]}]}
+}

@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "candidateVersion": "0.2.2",
+  "edition": "public",
+  "license": "Apache-2.0",
+  "distribution": "TypeScript source, compiled JavaScript/declarations and standalone ESM",
+  "publication": {
+    "status": "PENDING_EXACT_ARCHIVE_VALIDATION",
+    "ownerPublishes": true,
+    "ownerSelectionDate": "2026-10-02"
+  },
+  "selectedSource": [
+    {
+      "path": "src/canonical.ts",
+      "sha256": "61c80fc4cab9f18796e7e64a78bd48159dd5ca95168410be469ff7df0deae8ea",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/cli.ts",
+      "sha256": "8477be4cc9f4354c4eeee75d683e60b9481f6ca64ea7799dc85c73ead6ce796e",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/evidence.ts",
+      "sha256": "472f1383e019cde61395bb6b291e3d8cc4a50223bb2bd7fff66b3cb2db5bb738",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/examples.ts",
+      "sha256": "e269711e4645fd69842e942b78b6a9716937c643aceadaa784dcdfa752e9dc42",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/index.ts",
+      "sha256": "1228fe9a112a8d1d1b62997d2bd604edd9690bcc8965b4c883293c1dcca655ab",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/inference/adequacy.ts",
+      "sha256": "606a78e42a04f185c03650a4187e167b510cb0e6e45d84f82acb5520a6d00574",
+      "origin": {
+        "selectionId": "C3-05",
+        "sourcePath": "engines/discovery/src/adequacy.ts",
+        "baselineSourceSHA256": "1d0fafb70deb036f5f7abd9538c6d0242d527006d967937711222118f629a120",
+        "historicalCommons010DestinationSHA256": "72539bff0865e8b1574a69404520e827d8744fabdf8ba1ead87cca0e2629365c",
+        "currentContentHashSource": "CHECKSUMS.sha256",
+        "purpose": "Prepare-before-observe Bernoulli family adequacy monitoring and replay.",
+        "historicalExtractionChanges": [
+          "Relative .js imports changed to .ts for Node native TypeScript execution.",
+          "Implementation identifier renamed for the Commons extraction; baseline exact replay requires its original implementation.",
+          "Normalize exact complement log probability log(1) to +0 for strict canonical receipts."
+        ]
+      }
+    },
+    {
+      "path": "src/inference/compare.ts",
+      "sha256": "68808f544fdfa27e146bce7ba868622bc37e5ce0f8ed080149f4fcfbcd048231",
+      "origin": {
+        "selectionId": "C3-04",
+        "sourcePath": "engines/discovery/src/compare.ts",
+        "baselineSourceSHA256": "a972d98d5074f791913f426b7d819335277129f7b2c822ee7dfa74876c021da2",
+        "historicalCommons010DestinationSHA256": "2b006f4e3cece3fa15757a02fa9d6785099b4cca85393d63bd1a764414f8de5e",
+        "currentContentHashSource": "CHECKSUMS.sha256",
+        "purpose": "Numerical comparison with declared tolerances, separate from exact verification.",
+        "historicalExtractionChanges": [
+          "Relative .js imports changed to .ts for Node native TypeScript execution."
+        ]
+      }
+    },
+    {
+      "path": "src/inference/index.ts",
+      "sha256": "266db813a813790a3a9a20ca89eeb0113ead008dc5082891fde563181e106a12",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/inference/runtime.ts",
+      "sha256": "609645329d2a8fa79f191bbdb370d85d0939ff78b462c263e970e5c611ce168b",
+      "origin": {
+        "selectionId": "C3-03",
+        "sourcePath": "engines/discovery/src/runtime.ts",
+        "baselineSourceSHA256": "80fafc80772437e5880c013cf8f2213349c4c6cf691175da52c9bcc1d2a09f58",
+        "historicalCommons010DestinationSHA256": "ca4cbbee7f60defc040fb8ce2653522371564b4185836566e22bfb8dc0786d50",
+        "currentContentHashSource": "CHECKSUMS.sha256",
+        "purpose": "Recorded runtime identity and refusal of incompatible exact replay.",
+        "historicalExtractionChanges": [
+          "Relative .js imports changed to .ts for Node native TypeScript execution.",
+          "Implementation identifier renamed for the Commons extraction; baseline exact replay requires its original implementation."
+        ]
+      }
+    },
+    {
+      "path": "src/inference/session.ts",
+      "sha256": "6c34db70381103fd36cf147b22f73f2ffcd1266d396e55559d1af15c9caea364",
+      "origin": {
+        "selectionId": "C3-02",
+        "sourcePath": "engines/discovery/src/session.ts",
+        "baselineSourceSHA256": "996d9ee54f6d4ea68a51f820d15759f3a5fa21819056fba06b7c37e62ddbf66a",
+        "historicalCommons010DestinationSHA256": "9d38c49d8080c143c01b3c1b040a8814b7e15bd02de2a5edc478ddbcf130a17a",
+        "currentContentHashSource": "CHECKSUMS.sha256",
+        "purpose": "Finite-family Bayesian updates, experiment utility, exact decimal budget accounting, action loss, and replay chains.",
+        "historicalExtractionChanges": [
+          "Relative .js imports changed to .ts for Node native TypeScript execution.",
+          "Reject sparse arrays instead of generating ambiguous/non-JSON canonical encodings.",
+          "Refuse nonfinite posterior expected loss.",
+          "Normalize zero entropy to +0 for compatibility with strict canonical receipts."
+        ]
+      }
+    },
+    {
+      "path": "src/inference/types.ts",
+      "sha256": "2b4840a4e853a523ce014f1edf822ee1492c208d04b3e95ba424129970fbf967",
+      "origin": {
+        "selectionId": "C3-01",
+        "sourcePath": "engines/discovery/src/types.ts",
+        "baselineSourceSHA256": "1fee1710e5af38d83531d27d402b32530284695b1b2b978671b62549a52248c2",
+        "historicalCommons010DestinationSHA256": "458ff47efdf688042d8867300a7f23cc0a4c74bc51b5b71f895de7a07c63228d",
+        "currentContentHashSource": "CHECKSUMS.sha256",
+        "purpose": "Finite hypotheses, experiments, observations, decisions, and replay types.",
+        "historicalExtractionChanges": [
+          "Implementation identifier renamed for the Commons extraction; baseline exact replay requires its original implementation."
+        ]
+      }
+    },
+    {
+      "path": "src/package-root.ts",
+      "sha256": "f464fcae7725e7053ebfd3997d9df9db2d8710b695dab2dd1a52bfc6be18f085",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/policy.ts",
+      "sha256": "88e49faf40e84782ed3650008541bd568884c7a8b03cdf29a2bd21bdaa998085",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/receipt.ts",
+      "sha256": "e51d1b8c2aa6eb8a6f3994e1042ca11f970b0adf37297b5d5fa77b0bd1f13e72",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/run.ts",
+      "sha256": "a615b75fbeedc64aac2303ef2e3eea53a5a0a5b2c496757a09851414a0edcef6",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/runtime.ts",
+      "sha256": "0f44da50b3575a5c3d68822338dd11c6bac6f90406600ad837b9949503c3475e",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/server.ts",
+      "sha256": "7982d58f722960d3c3da7bb002b08068ea455eaffc933b12bfd4b60c9565ca5b",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    },
+    {
+      "path": "src/strict-json.ts",
+      "sha256": "9d21f53383919885d0828ae94ecf20da7c8efd048b575f12aea261f0af18cb85",
+      "origin": {
+        "kind": "Commons implementation"
+      }
+    }
+  ],
+  "inventory": "CHECKSUMS.sha256",
+  "note": "Inventory records the selected implementation. Historical records are retained separately. The checksum manifest is not a signature."
+}

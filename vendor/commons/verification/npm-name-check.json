@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "package": "@cosmic/commons",
+      "url": "https://registry.npmjs.org/%40cosmic%2Fcommons",
+      "checkedAt": "2026-10-02T21:44:28.861831+00:00",
+      "httpStatus": 404,
+      "httpDate": "Fri, 02 Oct 2026 21:44:28 GMT",
+      "body": "{\"error\":\"Not found\"}",
+      "bodySha256": "c8d3eae160a892e32837db3dcae515e843e5383fef52b8141940c8bcf8b6d59f",
+      "authenticated": false
+    },
+    {
+      "package": "cosmic-commons",
+      "url": "https://registry.npmjs.org/cosmic-commons",
+      "checkedAt": "2026-10-02T21:44:29.063253+00:00",
+      "httpStatus": 404,
+      "httpDate": "Fri, 02 Oct 2026 21:44:29 GMT",
+      "body": "{\"error\":\"Not found\"}",
+      "bodySha256": "c8d3eae160a892e32837db3dcae515e843e5383fef52b8141940c8bcf8b6d59f",
+      "authenticated": false
+    }
+  ],
+  "interpretation": "These unauthenticated HTTP responses describe public registry metadata at the recorded instant. A 404 does not establish that a name is reservable, that a private scoped package does not exist, or that the @cosmic account or organization scope is available or controlled by the publisher. No reservation, login, publication, or other mutation was performed.",
+  "scopeDocumentation": "https://docs.npmjs.com/about-scopes/"
+}

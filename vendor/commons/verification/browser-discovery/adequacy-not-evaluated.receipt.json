@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "kind": "discovery",
+  "input": {
+    "actions": [
+      {
+        "id": "investigate",
+        "losses": {
+          "negative": 1,
+          "positive": 1
+        }
+      },
+      {
+        "id": "accept-positive",
+        "losses": {
+          "negative": 20,
+          "positive": 0
+        }
+      },
+      {
+        "id": "accept-negative",
+        "losses": {
+          "negative": 0,
+          "positive": 20
+        }
+      }
+    ],
+    "definition": {
+      "budget": 6,
+      "experiments": [
+        {
+          "cost": 1,
+          "id": "probe",
+          "likelihoods": {
+            "negative": {
+              "0": 0.8,
+              "1": 0.2
+            },
+            "positive": {
+              "0": 0.2,
+              "1": 0.8
+            }
+          },
+          "outcomes": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "cost": 0.5,
+          "id": "weak-probe",
+          "likelihoods": {
+            "negative": {
+              "0": 0.6,
+              "1": 0.4
+            },
+            "positive": {
+              "0": 0.4,
+              "1": 0.6
+            }
+          },
+          "outcomes": [
+            "1",
+            "0"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "positive",
+          "prior": 0.5
+        },
+        {
+          "id": "negative",
+          "prior": 0.5
+        }
+      ],
+      "modelId": "sensor-direction-v1",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment"
+    },
+    "kind": "discovery",
+    "observations": [
+      {
+        "experimentId": "probe",
+        "id": "measurement-1",
+        "outcome": "1"
+      },
+      {
+        "experimentId": "probe",
+        "id": "measurement-2",
+        "outcome": "1"
+      }
+    ]
+  },
+  "result": {
+    "snapshot": {
+      "schemaVersion": 2,
+      "runtime": {
+        "implementation": "@cosmic/commons-discovery/0.2.1",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "numericalModel": "binary64-native-math"
+      },
+      "chainAnchorHash": "b6544873d5fdb7ca9169a1fcd41daf46b02e75f04992a7584c0b4c87141ed83a",
+      "modelId": "sensor-direction-v1",
+      "definitionHash": "e3b4fdce3e4c3703cc2b84139bbc53d7ca121b5a8cdf74b0a043fc955965783a",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment",
+      "probabilitySemantics": "posterior-within-declared-candidate-family",
+      "posterior": {
+        "positive": 0.9411764705882353,
+        "negative": 0.05882352941176473
+      },
+      "entropyNats": 0.22371807606583383,
+      "spent": 2,
+      "remainingBudget": 4,
+      "modelMismatch": false,
+      "receipts": [
+        {
+          "schemaVersion": 2,
+          "runtime": {
+            "implementation": "@cosmic/commons-discovery/0.2.1",
+            "node": "24.19.0",
+            "v8": "13.6.233.17-node.51",
+            "platform": "linux",
+            "architecture": "x64",
+            "endianness": "LE",
+            "numericalModel": "binary64-native-math"
+          },
+          "id": "measurement-1",
+          "experimentId": "probe",
+          "outcome": "1",
+          "sequence": 1,
+          "status": "updated",
+          "cost": 1,
+          "priorPredictiveProbability": 0.5,
+          "posterior": {
+            "positive": 0.8,
+            "negative": 0.20000000000000004
+          },
+          "priorPredictiveLogProbability": -0.6931471805599452,
+          "entropyNats": 0.5004024235381879,
+          "previousHash": "b6544873d5fdb7ca9169a1fcd41daf46b02e75f04992a7584c0b4c87141ed83a",
+          "hash": "e60e0309e8feebc58cf8ddf306798ac0d300c12335b2473703dafa0ded24ab92"
+        },
+        {
+          "schemaVersion": 2,
+          "runtime": {
+            "implementation": "@cosmic/commons-discovery/0.2.1",
+            "node": "24.19.0",
+            "v8": "13.6.233.17-node.51",
+            "platform": "linux",
+            "architecture": "x64",
+            "endianness": "LE",
+            "numericalModel": "binary64-native-math"
+          },
+          "id": "measurement-2",
+          "experimentId": "probe",
+          "outcome": "1",
+          "sequence": 2,
+          "status": "updated",
+          "cost": 1,
+          "priorPredictiveProbability": 0.6800000000000002,
+          "posterior": {
+            "positive": 0.9411764705882353,
+            "negative": 0.05882352941176473
+          },
+          "priorPredictiveLogProbability": -0.3856624808119847,
+          "entropyNats": 0.22371807606583383,
+          "previousHash": "e60e0309e8feebc58cf8ddf306798ac0d300c12335b2473703dafa0ded24ab92",
+          "hash": "14071f72fd3c78a716135897e128f6a88c4095c4ab094c6906eeb03815e7e192"
+        }
+      ]
+    },
+    "recommendation": {
+      "status": "stop",
+      "reason": "adequacy-not-evaluated"
+    },
+    "adequacy": {
+      "status": "NOT_EVALUATED",
+      "reason": "Adequacy was not requested; no family adequacy assessment was made."
+    },
+    "decisionStatus": "DEFER",
+    "action": null,
+    "assumptions": [
+      "Probabilities are conditional on the declared finite candidate family.",
+      "Observations are conditionally independent given the hypothesis and experiment.",
+      "NOT_REJECTED means insufficient evidence against the declared family, not approval.",
+      "An absent or unsupported adequacy assessment defers integrated action suggestions.",
+      "Experiment selection is greedy expected information per cost, not global optimality."
+    ]
+  },
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+  },
+  "digest": "2420988fb429656795be9090fecb0253b4b533fc05d8c4384480e74f3fbb65e7"
+}

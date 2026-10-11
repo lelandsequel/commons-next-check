@@ -1,0 +1,45 @@
+{
+  "name": "@cosmic/commons",
+  "version": "0.2.2",
+  "description": "Local deterministic reasoning, evidence policies, and independently replayable receipts.",
+  "type": "module",
+  "private": false,
+  "license": "Apache-2.0",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./inference": {
+      "types": "./dist/src/inference/index.d.ts",
+      "import": "./dist/src/inference/index.js"
+    },
+    "./policy": {
+      "types": "./dist/src/policy.d.ts",
+      "import": "./dist/src/policy.js"
+    }
+  },
+  "bin": {
+    "cosmic": "./bin/cosmic.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:check": "node scripts/build.mjs --check",
+    "start": "node bin/cosmic.mjs serve",
+    "test": "node bin/cosmic.mjs prove",
+    "prove": "node bin/cosmic.mjs prove",
+    "doctor": "node bin/cosmic.mjs doctor",
+    "demo": "node bin/cosmic.mjs demo",
+    "examples": "node bin/cosmic.mjs examples",
+    "bundle": "node scripts/build-bundle.mjs",
+    "bundle:check": "node scripts/build-bundle.mjs --check"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.0",
+    "esbuild": "0.25.12",
+    "typescript": "5.9.3"
+  }
+}

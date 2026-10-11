@@ -1,0 +1,43 @@
+{
+  "_license": "Apache-2.0",
+  "_note": "Declared fiction: made-up cause and check names with made-up likelihoods, not plant measurements.",
+  "causes": [
+    { "id": "tooling", "prior": 0.5 },
+    { "id": "material-lot", "prior": 0.3 },
+    { "id": "fixture", "prior": 0.2 }
+  ],
+  "checks": [
+    {
+      "id": "vibration-survey",
+      "cost": 10,
+      "outcomes": ["high", "low"],
+      "likelihoods": {
+        "tooling": { "high": 0.8, "low": 0.2 },
+        "material-lot": { "high": 0.3, "low": 0.7 },
+        "fixture": { "high": 0.5, "low": 0.5 }
+      }
+    },
+    {
+      "id": "hardness-coupon",
+      "cost": 20,
+      "outcomes": ["pass", "fail"],
+      "likelihoods": {
+        "tooling": { "pass": 0.9, "fail": 0.1 },
+        "material-lot": { "pass": 0.4, "fail": 0.6 },
+        "fixture": { "pass": 0.6, "fail": 0.4 }
+      }
+    },
+    {
+      "id": "alignment-jig",
+      "cost": 15,
+      "outcomes": ["aligned", "offset"],
+      "likelihoods": {
+        "tooling": { "aligned": 0.7, "offset": 0.3 },
+        "material-lot": { "aligned": 0.6, "offset": 0.4 },
+        "fixture": { "aligned": 0.2, "offset": 0.8 }
+      }
+    }
+  ],
+  "budget": 50,
+  "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment"
+}

@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 1,
+  "kind": "discovery",
+  "input": {
+    "actions": [
+      {
+        "id": "investigate",
+        "losses": {
+          "negative": 1,
+          "positive": 1
+        }
+      },
+      {
+        "id": "accept-positive",
+        "losses": {
+          "negative": 20,
+          "positive": 0
+        }
+      },
+      {
+        "id": "accept-negative",
+        "losses": {
+          "negative": 0,
+          "positive": 20
+        }
+      }
+    ],
+    "adequacy": {
+      "alpha": 0.05,
+      "epochId": "sensor-monitor-v1"
+    },
+    "definition": {
+      "budget": 6,
+      "experiments": [
+        {
+          "cost": 1,
+          "id": "probe",
+          "likelihoods": {
+            "negative": {
+              "0": 0.8,
+              "1": 0.2
+            },
+            "positive": {
+              "0": 0.2,
+              "1": 0.8
+            }
+          },
+          "outcomes": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "cost": 0.5,
+          "id": "weak-probe",
+          "likelihoods": {
+            "negative": {
+              "0": 0.6,
+              "1": 0.4
+            },
+            "positive": {
+              "0": 0.4,
+              "1": 0.6
+            }
+          },
+          "outcomes": [
+            "1",
+            "0"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "positive",
+          "prior": 0.5
+        },
+        {
+          "id": "negative",
+          "prior": 0.5
+        }
+      ],
+      "modelId": "sensor-direction-v1",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment"
+    },
+    "kind": "discovery",
+    "observations": [
+      {
+        "experimentId": "probe",
+        "id": "measurement-1",
+        "outcome": "1"
+      },
+      {
+        "experimentId": "probe",
+        "id": "measurement-2",
+        "outcome": "1"
+      }
+    ]
+  },
+  "result": {
+    "snapshot": {
+      "schemaVersion": 2,
+      "runtime": {
+        "implementation": "@cosmic/commons-discovery/0.2.1",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "numericalModel": "binary64-native-math"
+      },
+      "chainAnchorHash": "b6544873d5fdb7ca9169a1fcd41daf46b02e75f04992a7584c0b4c87141ed83a",
+      "modelId": "sensor-direction-v1",
+      "definitionHash": "e3b4fdce3e4c3703cc2b84139bbc53d7ca121b5a8cdf74b0a043fc955965783a",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment",
+      "probabilitySemantics": "posterior-within-declared-candidate-family",
+      "posterior": {
+        "positive": 0.9411764705882353,
+        "negative": 0.05882352941176473
+      },
+      "entropyNats": 0.22371807606583383,
+      "spent": 2,
+      "remainingBudget": 4,
+      "modelMismatch": false,
+      "receipts": [
+        {
+          "schemaVersion": 2,
+          "runtime": {
+            "implementation": "@cosmic/commons-discovery/0.2.1",
+            "node": "24.19.0",
+            "v8": "13.6.233.17-node.51",
+            "platform": "linux",
+            "architecture": "x64",
+            "endianness": "LE",
+            "numericalModel": "binary64-native-math"
+          },
+          "id": "measurement-1",
+          "experimentId": "probe",
+          "outcome": "1",
+          "sequence": 1,
+          "status": "updated",
+          "cost": 1,
+          "priorPredictiveProbability": 0.5,
+          "posterior": {
+            "positive": 0.8,
+            "negative": 0.20000000000000004
+          },
+          "priorPredictiveLogProbability": -0.6931471805599452,
+          "entropyNats": 0.5004024235381879,
+          "previousHash": "b6544873d5fdb7ca9169a1fcd41daf46b02e75f04992a7584c0b4c87141ed83a",
+          "hash": "e60e0309e8feebc58cf8ddf306798ac0d300c12335b2473703dafa0ded24ab92"
+        },
+        {
+          "schemaVersion": 2,
+          "runtime": {
+            "implementation": "@cosmic/commons-discovery/0.2.1",
+            "node": "24.19.0",
+            "v8": "13.6.233.17-node.51",
+            "platform": "linux",
+            "architecture": "x64",
+            "endianness": "LE",
+            "numericalModel": "binary64-native-math"
+          },
+          "id": "measurement-2",
+          "experimentId": "probe",
+          "outcome": "1",
+          "sequence": 2,
+          "status": "updated",
+          "cost": 1,
+          "priorPredictiveProbability": 0.6800000000000002,
+          "posterior": {
+            "positive": 0.9411764705882353,
+            "negative": 0.05882352941176473
+          },
+          "priorPredictiveLogProbability": -0.3856624808119847,
+          "entropyNats": 0.22371807606583383,
+          "previousHash": "e60e0309e8feebc58cf8ddf306798ac0d300c12335b2473703dafa0ded24ab92",
+          "hash": "14071f72fd3c78a716135897e128f6a88c4095c4ab094c6906eeb03815e7e192"
+        }
+      ]
+    },
+    "recommendation": {
+      "status": "experiment",
+      "experimentId": "probe",
+      "cost": 1,
+      "expectedInformationGainNats": 0.04519215043099656,
+      "informationGainPerCost": 0.04519215043099656,
+      "predictiveOutcomes": {
+        "0": 0.23529411764705885,
+        "1": 0.7647058823529411
+      }
+    },
+    "adequacy": {
+      "schemaVersion": 2,
+      "runtime": {
+        "implementation": "@cosmic/commons-adequacy/0.2.2",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "numericalModel": "binary64-native-math"
+      },
+      "definitionHash": "e3b4fdce3e4c3703cc2b84139bbc53d7ca121b5a8cdf74b0a043fc955965783a",
+      "optionsHash": "c6c0d4656bcc5759adbd4440fc9af1d92c00993a23d5d97c24afa366aa8ba66f",
+      "alpha": 0.05,
+      "epochId": "sensor-monitor-v1",
+      "supportPolicy": "strictly-positive-declared-prior-frozen-at-construction-v1",
+      "nullHypothesisIds": [
+        "positive",
+        "negative"
+      ],
+      "excludedZeroPriorHypothesisIds": [],
+      "normalizationPolicy": "normalize-row-preserve-smaller-tail-binary64-v1",
+      "effectiveLawHash": "c447a300b06b67d57ba06ba23755d454e21c49adb364d88533afd10a4478faf2",
+      "chainAnchorHash": "7a093933f2f0b0eca9bb90cb880a9d7746f8cfbac544180e80f7a1ecdf6a0799",
+      "status": "NOT_REJECTED",
+      "logEValue": -0.5345421503833067,
+      "eValueState": "finite",
+      "maxLogEValue": 0,
+      "firstCrossingSequence": null,
+      "nullLogLikelihoods": {
+        "positive": -0.44628710262841953,
+        "negative": -3.2188758248682006
+      },
+      "impossibleHypothesisIds": [],
+      "alternativeLogLikelihood": -0.9808292530117262,
+      "modelId": "sensor-direction-v1",
+      "nullSemantics": "frozen-positive-prior-conditional-bernoulli-laws",
+      "notRejectedSemantics": "insufficient-evidence-against-declared-laws-not-approval",
+      "budgetSemantics": "external-discovery-session-only",
+      "alternative": "per-experiment-beta-half-prequential",
+      "observationCount": 2,
+      "effectiveNullLaws": {
+        "probe": {
+          "positive": {
+            "tailOutcome": "0",
+            "tailProbability": 0.2,
+            "complementOutcome": "1"
+          },
+          "negative": {
+            "tailOutcome": "1",
+            "tailProbability": 0.2,
+            "complementOutcome": "0"
+          }
+        },
+        "weak-probe": {
+          "positive": {
+            "tailOutcome": "0",
+            "tailProbability": 0.4,
+            "complementOutcome": "1"
+          },
+          "negative": {
+            "tailOutcome": "1",
+            "tailProbability": 0.4,
+            "complementOutcome": "0"
+          }
+        }
+      },
+      "counts": {
+        "probe": {
+          "0": 0,
+          "1": 2
+        },
+        "weak-probe": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "pending": null,
+      "receipts": [
+        {
+          "schemaVersion": 2,
+          "runtime": {
+            "implementation": "@cosmic/commons-adequacy/0.2.2",
+            "node": "24.19.0",
+            "v8": "13.6.233.17-node.51",
+            "platform": "linux",
+            "architecture": "x64",
+            "endianness": "LE",
+            "numericalModel": "binary64-native-math"
+          },
+          "definitionHash": "e3b4fdce3e4c3703cc2b84139bbc53d7ca121b5a8cdf74b0a043fc955965783a",
+          "optionsHash": "c6c0d4656bcc5759adbd4440fc9af1d92c00993a23d5d97c24afa366aa8ba66f",
+          "alpha": 0.05,
+          "epochId": "sensor-monitor-v1",
+          "supportPolicy": "strictly-positive-declared-prior-frozen-at-construction-v1",
+          "nullHypothesisIds": [
+            "positive",
+            "negative"
+          ],
+          "excludedZeroPriorHypothesisIds": [],
+          "normalizationPolicy": "normalize-row-preserve-smaller-tail-binary64-v1",
+          "effectiveLawHash": "c447a300b06b67d57ba06ba23755d454e21c49adb364d88533afd10a4478faf2",
+          "chainAnchorHash": "7a093933f2f0b0eca9bb90cb880a9d7746f8cfbac544180e80f7a1ecdf6a0799",
+          "status": "NOT_REJECTED",
+          "logEValue": -0.4700036292457355,
+          "eValueState": "finite",
+          "maxLogEValue": 0,
+          "firstCrossingSequence": null,
+          "nullLogLikelihoods": {
+            "positive": -0.22314355131420976,
+            "negative": -1.6094379124341003
+          },
+          "impossibleHypothesisIds": [],
+          "alternativeLogLikelihood": -0.6931471805599453,
+          "id": "measurement-1",
+          "experimentId": "probe",
+          "outcome": "1",
+          "sequence": 1,
+          "prepared": {
+            "schemaVersion": 2,
+            "runtime": {
+              "implementation": "@cosmic/commons-adequacy/0.2.2",
+              "node": "24.19.0",
+              "v8": "13.6.233.17-node.51",
+              "platform": "linux",
+              "architecture": "x64",
+              "endianness": "LE",
+              "numericalModel": "binary64-native-math"
+            },
+            "definitionHash": "e3b4fdce3e4c3703cc2b84139bbc53d7ca121b5a8cdf74b0a043fc955965783a",
+            "optionsHash": "c6c0d4656bcc5759adbd4440fc9af1d92c00993a23d5d97c24afa366aa8ba66f",
+            "alpha": 0.05,
+            "epochId": "sensor-monitor-v1",
+            "supportPolicy": "strictly-positive-declared-prior-frozen-at-construction-v1",
+            "nullHypothesisIds": [
+              "positive",
+              "negative"
+            ],
+            "excludedZeroPriorHypothesisIds": [],
+            "normalizationPolicy": "normalize-row-preserve-smaller-tail-binary64-v1",
+            "effectiveLawHash": "c447a300b06b67d57ba06ba23755d454e21c49adb364d88533afd10a4478faf2",
+            "chainAnchorHash": "7a093933f2f0b0eca9bb90cb880a9d7746f8cfbac544180e80f7a1ecdf6a0799",
+            "id": "measurement-1",
+            "experimentId": "probe",
+            "sequence": 1,
+            "outcomes": [
+              "1",
+              "0"
+            ],
+            "nullProbabilities": {
+              "positive": {
+                "0": 0.2,
+                "1": 0.8
+              },
+              "negative": {
+                "0": 0.8,
+                "1": 0.2
+              }
+            },
+            "nullLogProbabilities": {
+              "positive": {
+                "0": -1.6094379124341003,
+                "1": -0.22314355131420976
+              },
+              "negative": {
+                "0": -0.22314355131420976,
+                "1": -1.6094379124341003
+              }
+            },
+            "alternativeProbabilities": {
+              "0": 0.5,
+              "1": 0.5
+            },
+            "previousHash": "7a093933f2f0b0eca9bb90cb880a9d7746f8cfbac544180e80f7a1ecdf6a0799",
+            "hash": "93c7bfe12c6aa4f8cec6309a97454010f3b0286b48441760648cbc7c859449f2"
+          },
+          "previousHash": "7a093933f2f0b0eca9bb90cb880a9d7746f8cfbac544180e80f7a1ecdf6a0799",
+          "hash": "8647ae5d1ddefb674caa74323fc6826da53636c050b88d79c0626dfb1a2cbff1"
+        },
+        {
+          "schemaVersion": 2,
+          "runtime": {
+            "implementation": "@cosmic/commons-adequacy/0.2.2",
+            "node": "24.19.0",
+            "v8": "13.6.233.17-node.51",
+            "platform": "linux",
+            "architecture": "x64",
+            "endianness": "LE",
+            "numericalModel": "binary64-native-math"
+          },
+          "definitionHash": "e3b4fdce3e4c3703cc2b84139bbc53d7ca121b5a8cdf74b0a043fc955965783a",
+          "optionsHash": "c6c0d4656bcc5759adbd4440fc9af1d92c00993a23d5d97c24afa366aa8ba66f",
+          "alpha": 0.05,
+          "epochId": "sensor-monitor-v1",
+          "supportPolicy": "strictly-positive-declared-prior-frozen-at-construction-v1",
+          "nullHypothesisIds": [
+            "positive",
+            "negative"
+          ],
+          "excludedZeroPriorHypothesisIds": [],
+          "normalizationPolicy": "normalize-row-preserve-smaller-tail-binary64-v1",
+          "effectiveLawHash": "c447a300b06b67d57ba06ba23755d454e21c49adb364d88533afd10a4478faf2",
+          "chainAnchorHash": "7a093933f2f0b0eca9bb90cb880a9d7746f8cfbac544180e80f7a1ecdf6a0799",
+          "status": "NOT_REJECTED",
+          "logEValue": -0.5345421503833067,
+          "eValueState": "finite",
+          "maxLogEValue": 0,
+          "firstCrossingSequence": null,
+          "nullLogLikelihoods": {
+            "positive": -0.44628710262841953,
+            "negative": -3.2188758248682006
+          },
+          "impossibleHypothesisIds": [],
+          "alternativeLogLikelihood": -0.9808292530117262,
+          "id": "measurement-2",
+          "experimentId": "probe",
+          "outcome": "1",
+          "sequence": 2,
+          "prepared": {
+            "schemaVersion": 2,
+            "runtime": {
+              "implementation": "@cosmic/commons-adequacy/0.2.2",
+              "node": "24.19.0",
+              "v8": "13.6.233.17-node.51",
+              "platform": "linux",
+              "architecture": "x64",
+              "endianness": "LE",
+              "numericalModel": "binary64-native-math"
+            },
+            "definitionHash": "e3b4fdce3e4c3703cc2b84139bbc53d7ca121b5a8cdf74b0a043fc955965783a",
+            "optionsHash": "c6c0d4656bcc5759adbd4440fc9af1d92c00993a23d5d97c24afa366aa8ba66f",
+            "alpha": 0.05,
+            "epochId": "sensor-monitor-v1",
+            "supportPolicy": "strictly-positive-declared-prior-frozen-at-construction-v1",
+            "nullHypothesisIds": [
+              "positive",
+              "negative"
+            ],
+            "excludedZeroPriorHypothesisIds": [],
+            "normalizationPolicy": "normalize-row-preserve-smaller-tail-binary64-v1",
+            "effectiveLawHash": "c447a300b06b67d57ba06ba23755d454e21c49adb364d88533afd10a4478faf2",
+            "chainAnchorHash": "7a093933f2f0b0eca9bb90cb880a9d7746f8cfbac544180e80f7a1ecdf6a0799",
+            "id": "measurement-2",
+            "experimentId": "probe",
+            "sequence": 2,
+            "outcomes": [
+              "1",
+              "0"
+            ],
+            "nullProbabilities": {
+              "positive": {
+                "0": 0.2,
+                "1": 0.8
+              },
+              "negative": {
+                "0": 0.8,
+                "1": 0.2
+              }
+            },
+            "nullLogProbabilities": {
+              "positive": {
+                "0": -1.6094379124341003,
+                "1": -0.22314355131420976
+              },
+              "negative": {
+                "0": -0.22314355131420976,
+                "1": -1.6094379124341003
+              }
+            },
+            "alternativeProbabilities": {
+              "0": 0.25,
+              "1": 0.75
+            },
+            "previousHash": "8647ae5d1ddefb674caa74323fc6826da53636c050b88d79c0626dfb1a2cbff1",
+            "hash": "9677b40e6ee8732230562ce5d67d40dd64ba7b19c209f676b96e264a494faeda"
+          },
+          "previousHash": "8647ae5d1ddefb674caa74323fc6826da53636c050b88d79c0626dfb1a2cbff1",
+          "hash": "3bf096a70c5a4dabd496165408c4e2ec82189eb99a65e66f0950881fb5f6a43e"
+        }
+      ]
+    },
+    "decisionStatus": "AVAILABLE",
+    "action": {
+      "actionId": "investigate",
+      "expectedLoss": 1,
+      "alternatives": [
+        {
+          "actionId": "investigate",
+          "expectedLoss": 1
+        },
+        {
+          "actionId": "accept-positive",
+          "expectedLoss": 1.1764705882352946
+        },
+        {
+          "actionId": "accept-negative",
+          "expectedLoss": 18.823529411764707
+        }
+      ]
+    },
+    "assumptions": [
+      "Probabilities are conditional on the declared finite candidate family.",
+      "Observations are conditionally independent given the hypothesis and experiment.",
+      "NOT_REJECTED means insufficient evidence against the declared family, not approval.",
+      "An absent or unsupported adequacy assessment defers integrated action suggestions.",
+      "Experiment selection is greedy expected information per cost, not global optimality."
+    ]
+  },
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2/standalone",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7"
+  },
+  "digest": "d8be09d2116e7d379eda83dfae04e192fa8cf95ee8227e9c3aab7e96a7769bd0"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "sourceArchiveSHA256": "4b9597d6846fb1c09ee50bb703d07ffceddbe4b4ce1b2e687052b116c0781b13",
+  "byteIdentity": "UNCHANGED",
+  "fixtures": [
+    {
+      "path": "tests/fixtures/regression/adequacy/with-zero-prior.json",
+      "bytes": 2762,
+      "sha256": "180ad6e6191ae0052d6043c3c75d6fa8ee42f3bacd69c954bbc9464659a0066c"
+    },
+    {
+      "path": "tests/fixtures/regression/adequacy/without-zero-prior.json",
+      "bytes": 2684,
+      "sha256": "7d4e434cd10c8474ec589f5ba4875cbe00d0bfd00763ccd35be4455c36205d0e"
+    },
+    {
+      "path": "tests/fixtures/regression/numbers/bigint-eq.json",
+      "bytes": 341,
+      "sha256": "fac169ecdc38c58affbf7df81e1b53baf9c5db4d3aa36f0ff57f74daf42a4e11"
+    },
+    {
+      "path": "tests/fixtures/regression/numbers/underflow-lte.json",
+      "bytes": 284,
+      "sha256": "57415048f1a748bb4d64fcf2d2177a458b9f4cfd08a6b57b7d5bbe646375603b"
+    },
+    {
+      "path": "tests/fixtures/regression/receipts/c-A1.json",
+      "bytes": 5234,
+      "sha256": "a0275a62e0a8e8d7fae61cada7ba04e847e24529c661dc39aabc550316865187"
+    },
+    {
+      "path": "tests/fixtures/regression/receipts/c-clean.digest",
+      "bytes": 65,
+      "sha256": "f109df15a704a2418bab62b202875f9c9b9394ca8a867beec71c0071dd087d7f"
+    },
+    {
+      "path": "tests/fixtures/regression/receipts/c-clean.json",
+      "bytes": 5210,
+      "sha256": "c54ceec10491875511c24f2609fc0bc4be8a5f60d597b27688045ca8e5512f16"
+    },
+    {
+      "path": "tests/fixtures/regression/receipts/denied.TAMPERED.receipt.json",
+      "bytes": 5238,
+      "sha256": "f4018e61991c2339f3c9c83f952bfd3ababa66fd9ead4ad50d355db1e1741ce2"
+    }
+  ]
+}

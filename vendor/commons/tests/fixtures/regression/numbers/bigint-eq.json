@@ -1,0 +1,3 @@
+{"kind":"policy","asOf":"2026-09-28T18:00:00.000Z",
+ "policy":{"id":"exact-build-number","version":"1","rules":[{"id":"must-be-build","factId":"build","op":"eq","value":1234567890123456789}]},
+ "evidence":{"sources":[{"id":"ci","content":{"build":1234567890123456788}}],"facts":[{"id":"build","sourceId":"ci","value":1234567890123456788}]}}

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "policy",
+  "input": {
+    "asOf": "2026-09-28T18:00:00.000Z",
+    "evidence": {
+      "facts": [
+        {
+          "id": "artifact",
+          "sourceId": "build-record",
+          "value": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172"
+        },
+        {
+          "dependsOn": [
+            "artifact"
+          ],
+          "id": "tests",
+          "sourceId": "build-record",
+          "value": true
+        },
+        {
+          "dependsOn": [
+            "artifact"
+          ],
+          "expiresAt": "2026-09-29T18:00:00.000Z",
+          "id": "review",
+          "sourceId": "review-record",
+          "value": "approved"
+        },
+        {
+          "dependsOn": [
+            "artifact"
+          ],
+          "id": "critical",
+          "sourceId": "build-record",
+          "value": 0
+        }
+      ],
+      "sources": [
+        {
+          "content": {
+            "artifact": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172",
+            "criticalFindings": 0,
+            "testsPassed": true
+          },
+          "id": "build-record"
+        },
+        {
+          "content": {
+            "artifact": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172",
+            "review": "approved"
+          },
+          "id": "review-record"
+        }
+      ]
+    },
+    "kind": "policy",
+    "policy": {
+      "id": "release-authorization",
+      "rules": [
+        {
+          "factId": "artifact",
+          "id": "artifact-bound",
+          "op": "eval",
+          "value": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172"
+        },
+        {
+          "factId": "tests",
+          "id": "tests-pass",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "factId": "review",
+          "id": "reviewed",
+          "op": "eq",
+          "value": "approved"
+        },
+        {
+          "factId": "critical",
+          "id": "no-critical-findings",
+          "op": "lte",
+          "value": 0
+        }
+      ],
+      "version": "1.0.0"
+    }
+  },
+  "result": {
+    "schema": "cosmic.policy-report.v1",
+    "policyId": null,
+    "policyVersion": null,
+    "asOf": "2026-09-28T18:00:00.000Z",
+    "verdict": "ERROR",
+    "trace": [],
+    "errors": [
+      {
+        "code": "MALFORMED_INPUT",
+        "message": "Unsupported rule operator"
+      }
+    ]
+  },
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+  },
+  "digest": "93f82a35491b994f07e2c1f4365cfd3cba7acd2d00bd86012a7590e10881e044"
+}

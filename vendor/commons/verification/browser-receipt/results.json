@@ -1,0 +1,84 @@
+{
+  "execution": "shipped-dist-javascript",
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+  },
+  "browserVersion": "153.0.8010.0",
+  "trustedDigest": "7dacc6f90dc9532bdbff4f7f6bd6ad9452854fed0f6d91d879e4178659ae6af0",
+  "results": [
+    {
+      "file": "deferred.receipt.json",
+      "requestBodyEqualsFile": true,
+      "response": {
+        "valid": true,
+        "integrity": "VALID",
+        "replay": "MATCH",
+        "anchoring": "MATCH",
+        "reason": "Exact replay and trusted digest match."
+      },
+      "visibleStatus": "CHECKS PASSED"
+    },
+    {
+      "file": "A1-duplicate-verdict.json",
+      "requestBodyEqualsFile": true,
+      "response": {
+        "valid": false,
+        "integrity": "NOT_CHECKED",
+        "replay": "NOT_RUN",
+        "anchoring": "MISMATCH",
+        "reason": "DUPLICATE_JSON_KEY: Duplicate decoded object key at character 2092"
+      },
+      "visibleStatus": "CHECKS FAILED"
+    },
+    {
+      "file": "A1-escaped-CRLF.json",
+      "requestBodyEqualsFile": true,
+      "response": {
+        "valid": false,
+        "integrity": "NOT_CHECKED",
+        "replay": "NOT_RUN",
+        "anchoring": "MISMATCH",
+        "reason": "DUPLICATE_JSON_KEY: Duplicate decoded object key at character 2182"
+      },
+      "visibleStatus": "CHECKS FAILED"
+    },
+    {
+      "file": "A1-legacy-envelope.json",
+      "requestBodyEqualsFile": true,
+      "response": {
+        "valid": false,
+        "integrity": "NOT_CHECKED",
+        "replay": "NOT_RUN",
+        "anchoring": "NOT_CHECKED",
+        "reason": "DUPLICATE_JSON_KEY: Duplicate decoded object key at character 2103"
+      },
+      "visibleStatus": "CHECKS FAILED"
+    },
+    {
+      "case": "actual-digest-mismatch",
+      "response": {
+        "valid": false,
+        "integrity": "INVALID",
+        "replay": "NOT_RUN",
+        "anchoring": "MISMATCH",
+        "reason": "Receipt digest does not match its payload"
+      },
+      "integrityIcon": "bad"
+    },
+    {
+      "case": "invalid-utf8-upload",
+      "browserRefused": true,
+      "previousInputPreserved": true,
+      "visibleError": "Could not import receipt JSON: Failed to execute 'decode' on 'TextDecoder': The encoded data was not valid."
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": []
+}

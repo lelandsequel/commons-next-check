@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "kind": "policy",
+  "input": {
+    "asOf": "2026-09-28T18:00:00.000Z",
+    "evidence": {
+      "facts": [
+        {
+          "id": "artifact",
+          "sourceId": "build-record",
+          "value": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172"
+        },
+        {
+          "dependsOn": [
+            "artifact"
+          ],
+          "id": "tests",
+          "sourceId": "build-record",
+          "value": true
+        },
+        {
+          "dependsOn": [
+            "artifact"
+          ],
+          "id": "critical",
+          "sourceId": "build-record",
+          "value": 0
+        }
+      ],
+      "sources": [
+        {
+          "content": {
+            "artifact": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172",
+            "criticalFindings": 0,
+            "testsPassed": true
+          },
+          "id": "build-record"
+        },
+        {
+          "content": {
+            "artifact": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172",
+            "review": "approved"
+          },
+          "id": "review-record"
+        }
+      ]
+    },
+    "kind": "policy",
+    "policy": {
+      "id": "release-authorization",
+      "rules": [
+        {
+          "factId": "artifact",
+          "id": "artifact-bound",
+          "op": "eq",
+          "value": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172"
+        },
+        {
+          "factId": "tests",
+          "id": "tests-pass",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "factId": "review",
+          "id": "reviewed",
+          "op": "eq",
+          "value": "approved"
+        },
+        {
+          "factId": "critical",
+          "id": "no-critical-findings",
+          "op": "lte",
+          "value": 0
+        }
+      ],
+      "version": "1.0.0"
+    }
+  },
+  "result": {
+    "schema": "cosmic.policy-report.v1",
+    "policyId": "release-authorization",
+    "policyVersion": "1.0.0",
+    "asOf": "2026-09-28T18:00:00.000Z",
+    "verdict": "ALLOW",
+    "verdict": "DEFER",
+    "trace": [
+      {
+        "ruleId": "artifact-bound",
+        "factId": "artifact",
+        "result": "PASS",
+        "code": "REQUIREMENT_SATISFIED",
+        "expected": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172",
+        "actual": "sha256:7738ea8df0c983596d149d344660db828b1b2474e0abad2b2ef46841b5bf5172"
+      },
+      {
+        "ruleId": "tests-pass",
+        "factId": "tests",
+        "result": "PASS",
+        "code": "REQUIREMENT_SATISFIED",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "ruleId": "reviewed",
+        "factId": "review",
+        "result": "DEFER",
+        "code": "MISSING_FACT",
+        "expected": "approved"
+      },
+      {
+        "ruleId": "no-critical-findings",
+        "factId": "critical",
+        "result": "PASS",
+        "code": "REQUIREMENT_SATISFIED",
+        "expected": 0,
+        "actual": 0
+      }
+    ],
+    "errors": [],
+    "evidence": {
+      "asOf": "2026-09-28T18:00:00.000Z",
+      "valid": true,
+      "issues": [],
+      "facts": [
+        {
+          "id": "artifact",
+          "status": "AVAILABLE",
+          "reasons": []
+        },
+        {
+          "id": "critical",
+          "status": "AVAILABLE",
+          "reasons": []
+        },
+        {
+          "id": "tests",
+          "status": "AVAILABLE",
+          "reasons": []
+        }
+      ],
+      "lineage": [
+        {
+          "factId": "artifact",
+          "sourceId": "build-record",
+          "dependsOn": []
+        },
+        {
+          "factId": "critical",
+          "sourceId": "build-record",
+          "dependsOn": [
+            "artifact"
+          ]
+        },
+        {
+          "factId": "tests",
+          "sourceId": "build-record",
+          "dependsOn": [
+            "artifact"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "build-record",
+          "contentStatus": "CONTENT_ONLY",
+          "computedDigest": "9393dd2e7c381568a13589c384f1224440c061d501f683a49d6163653f95632f"
+        },
+        {
+          "id": "review-record",
+          "contentStatus": "CONTENT_ONLY",
+          "computedDigest": "19cade4a233fffc30c95ee85c448418a54a913401dc2aed5308486101fdd3eb7"
+        }
+      ]
+    }
+  },
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+  },
+  "digest": "7dacc6f90dc9532bdbff4f7f6bd6ad9452854fed0f6d91d879e4178659ae6af0"
+}

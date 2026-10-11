@@ -1,0 +1,82 @@
+{
+  "execution": "isolated-standalone-browser",
+  "bundleSha256": "76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7",
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2/standalone",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "76716bd3de1a96cf0d4c739a53009fb541e36a1c3c159c4bae25919b91bfceb7"
+  },
+  "browserVersion": "153.0.8010.0",
+  "initialFiles": [
+    "cosmic-commons.mjs"
+  ],
+  "finalFiles": [
+    "cosmic-commons.mjs"
+  ],
+  "allRuntimeResourcesEmbedded": true,
+  "exampleIds": [
+    "discovery-deferred",
+    "release-authorization",
+    "release-deferred",
+    "release-denied",
+    "sensor-investigation"
+  ],
+  "results": [
+    {
+      "case": "example-discovery-deferred",
+      "digest": "afa3808faa2b91129d57c4d91deb69e91d31e09871c8744e48a2cd28d4a36e7b",
+      "visibleStatus": "DISCOVERY · DEFER"
+    },
+    {
+      "case": "example-release-authorization",
+      "digest": "cc81cfe8a9645ccc4e4a288042829a7e6d12c13dfc09f06c784a8eb7e7bd363d",
+      "visibleStatus": "POLICY · ALLOW"
+    },
+    {
+      "case": "example-release-deferred",
+      "digest": "20e5838e860dd856372990d9068b60b5d1a9fe5a2cd786207197e10b7848bf31",
+      "visibleStatus": "POLICY · DEFER"
+    },
+    {
+      "case": "example-release-denied",
+      "digest": "cef91b1c7020bc1ed4cc75c35550cbc4086c5b5a031de07e342a5c0f86d235dc",
+      "visibleStatus": "POLICY · DENY"
+    },
+    {
+      "case": "example-sensor-investigation",
+      "digest": "d8be09d2116e7d379eda83dfae04e192fa8cf95ee8227e9c3aab7e96a7769bd0",
+      "visibleStatus": "DISCOVERY · AVAILABLE"
+    },
+    {
+      "case": "download-upload-anchored-roundtrip",
+      "digest": "d8be09d2116e7d379eda83dfae04e192fa8cf95ee8227e9c3aab7e96a7769bd0",
+      "requestBodyEqualsDownload": true,
+      "response": {
+        "valid": true,
+        "integrity": "VALID",
+        "replay": "MATCH",
+        "anchoring": "MATCH",
+        "reason": "Exact replay and trusted digest match."
+      }
+    },
+    {
+      "case": "duplicate-upload-refused",
+      "requestBodyEqualsUpload": true,
+      "response": {
+        "valid": false,
+        "integrity": "NOT_CHECKED",
+        "replay": "NOT_RUN",
+        "anchoring": "MISMATCH",
+        "reason": "DUPLICATE_JSON_KEY: Duplicate decoded object key at character 2092"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "externalRequests": []
+}

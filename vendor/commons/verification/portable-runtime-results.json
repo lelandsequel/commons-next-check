@@ -1,0 +1,607 @@
+{
+  "package": "@cosmic/commons/0.2.2",
+  "private": false,
+  "shippedExampleIds": [
+    "discovery-deferred",
+    "release-authorization",
+    "release-deferred",
+    "release-denied",
+    "sensor-investigation"
+  ],
+  "cleanCopyWithoutNodeModules": true,
+  "executionTarget": ">=20",
+  "runtimes": [
+    {
+      "runtime": {
+        "implementation": "@cosmic/commons/0.2.2",
+        "node": "20.0.0",
+        "v8": "11.3.244.4-node.3",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+        "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+      },
+      "tests": 106,
+      "passed": 106,
+      "failed": 0,
+      "skipped": 0,
+      "transcript": "portable-node-20.0.0-linux-x64.txt",
+      "replay": [
+        {
+          "example": "discovery-deferred",
+          "digest": "6ee2908fff16f8dc34bb6d4ee93b6030b7b3fed8be0355eac684ac26e5389304",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-authorization",
+          "digest": "b381ad5f65278dac6202790a9c12d0a63a9592f91be7b535e56c297da0ad4a07",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-deferred",
+          "digest": "715e0bb0193b4b29f8e3f706130bae6d301473a079e1f36c3a1be79db143c879",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-denied",
+          "digest": "94364ee09242bf3e211b88926ba6fbe058700595127ec81e64057198fbdb80d8",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "sensor-investigation",
+          "digest": "1c36db0504125d5d0e32175da206d1a3e3eca73ccbbbea4382552d289ffd7060",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        }
+      ]
+    },
+    {
+      "runtime": {
+        "implementation": "@cosmic/commons/0.2.2",
+        "node": "22.0.0",
+        "v8": "12.4.254.14-node.10",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+        "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+      },
+      "tests": 106,
+      "passed": 106,
+      "failed": 0,
+      "skipped": 0,
+      "transcript": "portable-node-22.0.0-linux-x64.txt",
+      "replay": [
+        {
+          "example": "discovery-deferred",
+          "digest": "2e178d346b61f6b02f688d80cd67680a94d56b6527d49bff247183a7cc331f8b",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-authorization",
+          "digest": "c19eaf60ff43f2e5760d27a87fccf7cd40662bc2d6c80113440aec5dbe9b1a65",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-deferred",
+          "digest": "7c3b03471720e3ce130e16d2a281b0e9db2bf3c5dc9002a69fc4594f0a742f9b",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-denied",
+          "digest": "2eaa0d895e0e044a2b4aa69208d178bfb806eed1690f02843e541b82f8aa986d",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "sensor-investigation",
+          "digest": "7ab6412c0a3fe8a15a2a05b9dd76201c0a8359c0f8546a3e666b6e8f7a146dfb",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        }
+      ]
+    },
+    {
+      "runtime": {
+        "implementation": "@cosmic/commons/0.2.2",
+        "node": "24.15.0",
+        "v8": "13.6.233.17-node.48",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+        "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+      },
+      "tests": 106,
+      "passed": 106,
+      "failed": 0,
+      "skipped": 0,
+      "transcript": "portable-node-24.15.0-linux-x64.txt",
+      "replay": [
+        {
+          "example": "discovery-deferred",
+          "digest": "bab794b7e4d0a4d07f82ea2585269866ade215076243c98d4ae6bd6d2ecacbaf",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-authorization",
+          "digest": "fd1bc493953e98353ee46dac5a2b3da22f775a98584cfc8e1e6cc7d987e20e72",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-deferred",
+          "digest": "d8854d4d081fb13ce57ffbc24f5b5eae0446ae8e44a4e6def1ad722f4ad6d3a0",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-denied",
+          "digest": "5df05b995c152858170c47e3037ba59010f2635c069fb17eedc360768996776f",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "sensor-investigation",
+          "digest": "dd2ca756f24f06efa81db4000f3ae17eb82877ba2a12c7cfca30da214c82d283",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        }
+      ]
+    },
+    {
+      "runtime": {
+        "implementation": "@cosmic/commons/0.2.2",
+        "node": "24.18.0",
+        "v8": "13.6.233.17-node.50",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+        "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+      },
+      "tests": 106,
+      "passed": 106,
+      "failed": 0,
+      "skipped": 0,
+      "transcript": "portable-node-24.18.0-linux-x64.txt",
+      "replay": [
+        {
+          "example": "discovery-deferred",
+          "digest": "e5acb1a677e759b386aadc95f7dfbd39c78cedf053c8199d4a5041fc1b7d2c69",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-authorization",
+          "digest": "f6cdf026b97aede34ed2ee45f889acdb33958bf00708b71948a14a04aabf8266",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-deferred",
+          "digest": "0b2c7ef4258eac84d933f8fec024d80f81ab59e5e85dd856ef61746b67bcfaa7",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-denied",
+          "digest": "32c247672407dd42c6662e9e3a2c0afd0d15cbd81e6215c43d7c65e03235a628",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "sensor-investigation",
+          "digest": "f13f9f5a18b801762a0bfcd2ca4cf3d4d1e4f39a22ab7144ea7710b00c534acf",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        }
+      ]
+    },
+    {
+      "runtime": {
+        "implementation": "@cosmic/commons/0.2.2",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+        "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+      },
+      "tests": 106,
+      "passed": 106,
+      "failed": 0,
+      "skipped": 0,
+      "transcript": "portable-node-24.19.0-linux-x64.txt",
+      "replay": [
+        {
+          "example": "discovery-deferred",
+          "digest": "f290bb1b9852594edc31773ec6523c91487b4b2659c6a961f64c2d75ac4972af",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-authorization",
+          "digest": "365753a9b1d12600a9505474c68afe23fb2076c16b31b9195488ea96031cd45a",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-deferred",
+          "digest": "7dacc6f90dc9532bdbff4f7f6bd6ad9452854fed0f6d91d879e4178659ae6af0",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "release-denied",
+          "digest": "977c5587b292afa71655a1a02fbf5e6667f219219d3ab00978974c6b7d000d41",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        },
+        {
+          "example": "sensor-investigation",
+          "digest": "1415a937da05363b8b0ea122b45f99aa622a9397e343f58b7a3e5b90ed587bc1",
+          "result": {
+            "valid": true,
+            "integrity": "VALID",
+            "replay": "MATCH",
+            "anchoring": "MATCH",
+            "reason": "Exact replay and trusted digest match."
+          }
+        }
+      ]
+    }
+  ],
+  "crossRuntime": [
+    {
+      "from": "20.0.0",
+      "to": "22.0.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "20.0.0",
+      "to": "24.15.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "20.0.0",
+      "to": "24.18.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "20.0.0",
+      "to": "24.19.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "22.0.0",
+      "to": "20.0.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "22.0.0",
+      "to": "24.15.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "22.0.0",
+      "to": "24.18.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "22.0.0",
+      "to": "24.19.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.15.0",
+      "to": "20.0.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.15.0",
+      "to": "22.0.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.15.0",
+      "to": "24.18.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.15.0",
+      "to": "24.19.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.18.0",
+      "to": "20.0.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.18.0",
+      "to": "22.0.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.18.0",
+      "to": "24.15.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.18.0",
+      "to": "24.19.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.19.0",
+      "to": "20.0.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.19.0",
+      "to": "22.0.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.19.0",
+      "to": "24.15.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    },
+    {
+      "from": "24.19.0",
+      "to": "24.18.0",
+      "result": {
+        "valid": false,
+        "integrity": "VALID",
+        "replay": "UNSUPPORTED",
+        "anchoring": "MATCH",
+        "reason": "Exact replay requires the recorded source artifact, Node/V8, platform, architecture, and endianness"
+      }
+    }
+  ]
+}

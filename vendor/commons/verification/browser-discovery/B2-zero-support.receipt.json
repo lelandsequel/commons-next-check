@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "kind": "discovery",
+  "input": {
+    "actions": [
+      {
+        "id": "investigate",
+        "losses": {
+          "negative": 1,
+          "positive": 1
+        }
+      },
+      {
+        "id": "accept-positive",
+        "losses": {
+          "negative": 20,
+          "positive": 0
+        }
+      },
+      {
+        "id": "accept-negative",
+        "losses": {
+          "negative": 0,
+          "positive": 20
+        }
+      }
+    ],
+    "definition": {
+      "budget": 6,
+      "experiments": [
+        {
+          "cost": 1,
+          "id": "probe",
+          "likelihoods": {
+            "negative": {
+              "0": 0,
+              "1": 1
+            },
+            "positive": {
+              "0": 0,
+              "1": 1
+            }
+          },
+          "outcomes": [
+            "1",
+            "0"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "positive",
+          "prior": 0.5
+        },
+        {
+          "id": "negative",
+          "prior": 0.5
+        }
+      ],
+      "modelId": "sensor-direction-v1",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment"
+    },
+    "kind": "discovery",
+    "observations": [
+      {
+        "experimentId": "probe",
+        "id": "impossible",
+        "outcome": "0"
+      }
+    ]
+  },
+  "result": {
+    "snapshot": {
+      "schemaVersion": 2,
+      "runtime": {
+        "implementation": "@cosmic/commons-discovery/0.2.1",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "platform": "linux",
+        "architecture": "x64",
+        "endianness": "LE",
+        "numericalModel": "binary64-native-math"
+      },
+      "chainAnchorHash": "434c89e11cf433d1a256bd0fb83a1177b5a66bffe9e25cb27f4145cf006d1717",
+      "modelId": "sensor-direction-v1",
+      "definitionHash": "60bb6f84f4d22fdd363e2e5694c4619fab3362cfb9737b804f95bdc4b77fca38",
+      "observationAssumption": "conditionally-independent-given-hypothesis-and-experiment",
+      "probabilitySemantics": "posterior-within-declared-candidate-family",
+      "posterior": {
+        "positive": 0.5,
+        "negative": 0.5
+      },
+      "entropyNats": 0.6931471805599453,
+      "spent": 1,
+      "remainingBudget": 5,
+      "modelMismatch": true,
+      "receipts": [
+        {
+          "schemaVersion": 2,
+          "runtime": {
+            "implementation": "@cosmic/commons-discovery/0.2.1",
+            "node": "24.19.0",
+            "v8": "13.6.233.17-node.51",
+            "platform": "linux",
+            "architecture": "x64",
+            "endianness": "LE",
+            "numericalModel": "binary64-native-math"
+          },
+          "id": "impossible",
+          "experimentId": "probe",
+          "outcome": "0",
+          "sequence": 1,
+          "status": "model-mismatch",
+          "cost": 1,
+          "priorPredictiveProbability": 0,
+          "posterior": {
+            "positive": 0.5,
+            "negative": 0.5
+          },
+          "priorPredictiveLogProbability": null,
+          "entropyNats": 0.6931471805599453,
+          "previousHash": "434c89e11cf433d1a256bd0fb83a1177b5a66bffe9e25cb27f4145cf006d1717",
+          "hash": "8ccf85551606188ea084001ca909e018801621869199bbeb2ee7a8f2e272a340"
+        }
+      ]
+    },
+    "recommendation": {
+      "status": "stop",
+      "reason": "adequacy-not-evaluated"
+    },
+    "adequacy": {
+      "status": "NOT_EVALUATED",
+      "reason": "Adequacy was not requested; no family adequacy assessment was made."
+    },
+    "decisionStatus": "DEFER",
+    "action": null,
+    "assumptions": [
+      "Probabilities are conditional on the declared finite candidate family.",
+      "Observations are conditionally independent given the hypothesis and experiment.",
+      "NOT_REJECTED means insufficient evidence against the declared family, not approval.",
+      "An absent or unsupported adequacy assessment defers integrated action suggestions.",
+      "Experiment selection is greedy expected information per cost, not global optimality."
+    ]
+  },
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+  },
+  "digest": "31d03739e8735f3849a9466f0edf2deaa048420359742b3c81c71a58afcbbd40"
+}

@@ -1,0 +1,133 @@
+{
+  "execution": "shipped-dist-javascript",
+  "runtime": {
+    "implementation": "@cosmic/commons/0.2.2",
+    "node": "24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "architecture": "x64",
+    "endianness": "LE",
+    "sourceDigest": "aee2fd44a7b399e767cb353ff075fd7bbf5791ab60d7e52a9e0dd87e9962eb6b",
+    "codeDigest": "1226e6f019a10386959a0115f41db91eeba925b7c2cfcffdcf00a76aa600d397"
+  },
+  "browserVersion": "153.0.8010.0",
+  "results": [
+    {
+      "case": "shipped-excluded-decoy-example",
+      "digest": "f290bb1b9852594edc31773ec6523c91487b4b2659c6a961f64c2d75ac4972af",
+      "visibleStatus": "DISCOVERY · DEFER",
+      "actionShown": false
+    },
+    {
+      "case": "Regression-adequacy-with-zero-prior.json",
+      "digest": "d15741c41ce6b7fb2f4306d7677a9942fa5fa108f513552077ef4b559bec0154",
+      "visibleStatus": "DISCOVERY · DEFER",
+      "actionShown": false,
+      "originalRawInputPreserved": true
+    },
+    {
+      "case": "Regression-adequacy-without-zero-prior.json",
+      "digest": "6efded59e56f1e4485b5c0e4efd0f01b9b6f3ee6e2f5a9d4f4400a73914674cd",
+      "visibleStatus": "DISCOVERY · DEFER",
+      "actionShown": false,
+      "originalRawInputPreserved": true
+    },
+    {
+      "case": "rejected-family",
+      "digest": "7c1646d72e28dc3fd1e2926ef5bd3908b40a164d8558c4b98b5de45006e4b7c6",
+      "visibleStatus": "DISCOVERY · DEFER",
+      "noticeBeforeSummary": true,
+      "actionShown": false
+    },
+    {
+      "case": "posterior-one-but-rejected",
+      "digest": "f38e71600cd123911f9b50d6cc883d031e81c0ca5439d917ddc46bf9f5a6b33e",
+      "conditionalPosterior": 1,
+      "visibleStatus": "DISCOVERY · DEFER",
+      "actionShown": false
+    },
+    {
+      "case": "zero-support",
+      "digest": "31d03739e8735f3849a9466f0edf2deaa048420359742b3c81c71a58afcbbd40",
+      "visibleStatus": "DISCOVERY · DEFER",
+      "actionShown": false
+    },
+    {
+      "case": "adequacy-not-evaluated",
+      "digest": "2420988fb429656795be9090fecb0253b4b533fc05d8c4384480e74f3fbb65e7",
+      "adequacyStatus": "NOT_EVALUATED",
+      "visibleStatus": "DISCOVERY · DEFER",
+      "actionShown": false
+    },
+    {
+      "case": "adequacy-unsupported",
+      "digest": "eaaeba6e84710f897f1dbcb122cd9d578e8b07b562c9f333f3faaa42ecc01805",
+      "adequacyStatus": "UNSUPPORTED",
+      "visibleStatus": "DISCOVERY · DEFER",
+      "actionShown": false
+    },
+    {
+      "case": "posterior-near-one",
+      "digest": "b5f94a3360e0827f6b97e5ac0d9892fd09c3b258446a2cdd3fa25df247cc4eee",
+      "conditionalPosterior": 0.99999999998,
+      "visiblePercentage": "99.99999999799999%",
+      "exactWeightAccessible": true
+    },
+    {
+      "case": "available",
+      "digest": "1415a937da05363b8b0ea122b45f99aa622a9397e343f58b7a3e5b90ed587bc1",
+      "actionShown": true,
+      "priorRefusalCleared": true
+    },
+    {
+      "case": "policy-defer",
+      "digest": "7dacc6f90dc9532bdbff4f7f6bd6ad9452854fed0f6d91d879e4178659ae6af0",
+      "visibleStatus": "POLICY · DEFER",
+      "pillClass": "pill warning"
+    },
+    {
+      "case": "policy-deny",
+      "digest": "977c5587b292afa71655a1a02fbf5e6667f219219d3ab00978974c6b7d000d41",
+      "visibleStatus": "POLICY · DENY",
+      "pillClass": "pill invalid"
+    },
+    {
+      "case": "policy-error",
+      "digest": "93f82a35491b994f07e2c1f4365cfd3cba7acd2d00bd86012a7590e10881e044",
+      "visibleStatus": "POLICY · ERROR",
+      "pillClass": "pill invalid"
+    },
+    {
+      "case": "format-duplicate",
+      "rawPreservedInRequest": true,
+      "status": 400,
+      "refusedInputUnchanged": true
+    },
+    {
+      "case": "format-rounded-integer",
+      "rawPreservedInRequest": true,
+      "status": 400,
+      "refusedInputUnchanged": true
+    },
+    {
+      "case": "format-exact-unsafe-integer",
+      "rawPreservedInRequest": true,
+      "status": 400,
+      "refusedInputUnchanged": true
+    },
+    {
+      "case": "format-rounded-threshold",
+      "rawPreservedInRequest": true,
+      "status": 400,
+      "refusedInputUnchanged": true
+    },
+    {
+      "case": "format-valid",
+      "rawPreservedInRequest": true,
+      "status": 200,
+      "refusedInputUnchanged": false
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": []
+}
